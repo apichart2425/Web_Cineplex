@@ -3,19 +3,21 @@
     <carousel :perPage="1" :paginationEnabled="false" :autoplayHoverPause="false" :autoplay="true" :loop="true"
       :autoplayTimeout="5000">
 
-      <slide v-for="wallpapers,index_img in movies">
-        <div class="movie">
-          <div class="size_carousel" :style="{'background-image':'url('+wallpapers.wallpaper+')'}">
+      <slide v-for="movie,index_img in movies">
+        <div>
+          <div class="size_carousel" :style="{'background-image':'url('+movie.wallpaper+')'}">
             <div class="container">
               <div class="row">
                 <div class="col-md-9 text-left text-bg" >
-                  <h1>{{wallpapers.name.en}}</h1>
-                  <h4>{{wallpapers.name.th}}</h4>
+                  <h1>{{movie.name.en}}</h1>
+                  <h4>{{movie.name.th}}</h4>
                   <h3  >
                     หมวดหมู่:
-                  <label v-for="categorie,index in categories" v-if="categorie.name[index] == wallpapers.categorie"> &nbsp;{{categorie.name}} |</label>
+                  <label v-for="categorie,index in movie.categories" > &nbsp;{{categories[index].name}}
+                  <label v-if="index !=  movie.categories.length-1">|</label> </label>
+                  <!-- <label v-for="categorie,index in categories" v-if="categorie.name[index] == movie.categorie"> &nbsp;{{categorie.name}} |</label> -->
                 </h3>
-                  <a href="" class="btn btn-primary btn-lg" title="wallpapers.name.th">
+                  <a href="" class="btn btn-primary btn-lg" :title="movie.name.th">
                     รายละเอียดหนัง</a>
                 </div>
               </div>
