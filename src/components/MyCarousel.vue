@@ -21,12 +21,9 @@
 
 <style scoped>
   .size_carousel {
-    height: 80vh;
-    /* width: auto; */
-    /* padding: 50px; */
+    height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
-
 </style>
