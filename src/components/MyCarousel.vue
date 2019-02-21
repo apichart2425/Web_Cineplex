@@ -2,9 +2,25 @@
   <div class="">
     <carousel :perPage="1" :paginationEnabled="false" :autoplayHoverPause="false" :autoplay="true" :loop="true"
       :autoplayTimeout="5000">
-      <slide v-for="wallpapers in movies">
-        <div class="size_carousel" :style="{'background-image':'url('+wallpapers.wallpaper+')'}">
-          <div class="bottom-right">Bottom Right</div>
+
+      <slide v-for="wallpapers,index_img in movies">
+        <div class="movie">
+          <div class="size_carousel" :style="{'background-image':'url('+wallpapers.wallpaper+')'}">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-9 text-left text-bg" >
+                  <h1>{{wallpapers.name.en}}</h1>
+                  <h4>{{wallpapers.name.th}}</h4>
+                  <h3  >
+                    หมวดหมู่:
+                  <label v-for="categorie,index in categories" v-if="categorie.name[index] == wallpapers.categorie"> &nbsp;{{categorie.name}} |</label>
+                </h3>
+                  <a href="" class="btn btn-primary btn-lg" title="wallpapers.name.th">
+                    รายละเอียดหนัง</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
         <!-- <img class=""alt=""> -->
@@ -18,7 +34,7 @@
 <script>
   export default {
     name: 'MyCarousel',
-    props: ['movies'],
+    props: ['movies', 'categories'],
   }
 
 </script>
@@ -31,41 +47,12 @@
     background-position: center;
   }
 
-  .container {
-    position: relative;
-    text-align: center;
+
+  .text-bg {
+    position: absolute;
+    bottom: 10%;
     color: white;
+    /* background-color: wheat */
+    opacity: 1;
   }
-
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-  }
-
-  .top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-  }
-
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-  }
-
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
 </style>

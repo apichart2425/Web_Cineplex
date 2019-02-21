@@ -2,7 +2,7 @@
   <div>
     <div id="home">
       <!-- <img src="../assets/logo.png"> -->
-      <MyCarousel class="mx-3" :movies="movies"/>
+      <MyCarousel class="mx-3" :movies="movies" :categories="categories"/>
     </div>
   </div>
 </template>
@@ -14,7 +14,8 @@
     components: {MyCarousel},
     data () {
     return {
-      movies: movies
+      movies: movies,
+      categories:categories,
     }
   }
   }
