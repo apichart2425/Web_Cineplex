@@ -2,7 +2,7 @@
   <div>
     <div id="home">
       <!-- <img src="../assets/logo.png"> -->
-      <MyCarousel :movies="movies"/>
+      <MyCarousel class="mx-3" :movies="movies"/>
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    /* margin-top: 60px; */
   }
 
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+    <div>
+        <Navbar/>
+    </div>
     <!-- <router-link to='/home'>home</router-link> -->
-    <Navbar/>
     <!-- <MyCarousel :movies="movies"/> -->
     <router-view/>
   </div>

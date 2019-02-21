@@ -20,7 +20,7 @@ movies = [
         id: 1, 
         name: { en:"Captain Marvel", th: "กัปตันมาร์เวล" }, 
         poster: "https://www.majorcineplex.com/uploads/movie/2465/thumb_2465-large.jpg", 
-        wallpaper: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8LyWVwDbU4vsOwns8RxOB9aX73l.jpg" ,
+        wallpaper: "https://image.tmdb.org/t/p/original/ql5jol2TmXFiwKgzt1sL4z5HGrD.jpg" ,
         // director: "แอนนา โบเดน, ไรอัน เฟล็ก", 
         // actors: "บรี ลาร์สัน, ซามูเอล แอล. แจ็กสัน, ลี เพซ, จู๊ด ลอว์", 
         categories: [1,2,11],

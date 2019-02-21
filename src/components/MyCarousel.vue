@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <carousel :perPage="1" :autoplay="true" :loop="true" :autoplayTimeout="5000">
+  <div class="" >
+    <carousel :perPage="1" :paginationEnabled="false" :autoplayHoverPause="false" :autoplay="true" :loop="true" :autoplayTimeout="5000">
       <slide v-for="wallpapers in movies">
-        <!-- <div class="img_cal" :style="{'background-image: 'url('+wallpapers.poster+')'}"></div> -->
-        <!-- <div class="img_cal" :style="{'background-image':'url('+wallpapers.poster+')'}"></div> -->
-        <div                 :style="{'background-image':'url('+wallpapers.poster+')'}"></div>
-        <!-- {{wallpapers.poster}} -->
+        <div class="size_carousel" :style="{'background-image':'url('+wallpapers.wallpaper+')'}"></div>
+        <!-- <img class=""alt=""> -->
       </slide>
     </carousel>
     
@@ -22,7 +20,10 @@
 </script>
 
 <style scoped>
-  .img_cal {
+  .size_carousel {
+    height: 80vh;
+    /* width: auto; */
+    /* padding: 50px; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
