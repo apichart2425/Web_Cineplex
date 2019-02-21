@@ -2,12 +2,13 @@
   <div id="app">
     <!-- <router-link to='/home'>home</router-link> -->
     <Navbar/>
-    <MyCarousel :movies="moviesData"/>
+    <MyCarousel :movies="movies"/>
     <router-view/>
   </div>
 </template>
 
 <script>
+
 import Navbar from "@/components/Navbar"
 import MyCarousel from "@/components/MyCarousel"
 export default {
@@ -15,10 +16,11 @@ export default {
   components: {Navbar, MyCarousel},
   data () {
     return {
-      moviesData: movies      
+      movies: movies
     }
   }
 }
+
 </script>
 
 <style>

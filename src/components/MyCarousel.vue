@@ -2,10 +2,9 @@
   <div>
     <carousel :perPage="1" :autoplay="true" :loop="true" :autoplayTimeout="5000">
       <slide v-for="wallpapers in movies">
-        <!-- <img :src="img.poster" alt=""> -->
-        <!-- <div class="img_cal" :style="{'background-image: 'url('+img.poster+')'}"></div> -->
-        <div class="img_cal" :style="{'background-image':'url('+wallpapers.wallpaper+')'}"></div>
-        <!-- {{wallpapers.wallpaper}} -->
+        <!-- <div class="img_cal" :style="{'background-image: 'url('+wallpapers.poster+')'}"></div> -->
+        <div class="img_cal" :style="{'background-image':'url('+wallpapers.poster+')'}"></div>
+        <!-- {{wallpapers.poster}} -->
       </slide>
     </carousel>
     
@@ -13,6 +12,7 @@
 </template>
 
 <script>
+
   export default {
     name: 'MyCarousel',
     props: ['movies'],

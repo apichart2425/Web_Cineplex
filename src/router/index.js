@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/Home'
+import Movie from '@/components/movie'
 import {
   homedir
 } from 'os';
@@ -15,9 +16,9 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/Movie',
+      name: 'Movie',
+      component: Movie,
     },
   ]
 })
