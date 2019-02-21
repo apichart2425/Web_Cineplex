@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <router-link to='/home'>home</router-link> -->
+    <Navbar/>
+    <MyCarousel :movies="moviesData"/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from "@/components/Navbar"
+import MyCarousel from "@/components/MyCarousel"
 export default {
-  name: 'App'
+  name: 'App',
+  components: {Navbar, MyCarousel},
+  data () {
+    return {
+      moviesData: movies      
+    }
+  }
 }
 </script>
 
@@ -18,6 +28,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>

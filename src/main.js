@@ -3,13 +3,19 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueRouter from 'vue-router'
+import VueCarousel from 'vue-carousel'
 
-Vue.config.productionTip = false
+require("./api/data")
+
+Vue.use(VueRouter);
+Vue.use(VueCarousel);
+
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })
