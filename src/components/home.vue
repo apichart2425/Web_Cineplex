@@ -2,14 +2,21 @@
   <div>
     <div id="home">
       <!-- <img src="../assets/logo.png"> -->
-
+      <MyCarousel :movies="movies"/>
     </div>
   </div>
 </template>
 
 <script>
+  import MyCarousel from "@/components/MyCarousel"
   export default {
-    name: 'Home'
+    name: 'Home',
+    components: {MyCarousel},
+    data () {
+    return {
+      movies: movies
+    }
+  }
   }
 
 </script>

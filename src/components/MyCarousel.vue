@@ -3,7 +3,8 @@
     <carousel :perPage="1" :autoplay="true" :loop="true" :autoplayTimeout="5000">
       <slide v-for="wallpapers in movies">
         <!-- <div class="img_cal" :style="{'background-image: 'url('+wallpapers.poster+')'}"></div> -->
-        <div class="img_cal" :style="{'background-image':'url('+wallpapers.poster+')'}"></div>
+        <!-- <div class="img_cal" :style="{'background-image':'url('+wallpapers.poster+')'}"></div> -->
+        <div                 :style="{'background-image':'url('+wallpapers.poster+')'}"></div>
         <!-- {{wallpapers.poster}} -->
       </slide>
     </carousel>

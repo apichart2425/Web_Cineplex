@@ -6,6 +6,7 @@ import router from './router'
 import VueRouter from 'vue-router'
 import VueCarousel from 'vue-carousel'
 
+
 require("./api/data")
 
 Vue.use(VueRouter);
