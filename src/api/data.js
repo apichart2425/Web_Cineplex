@@ -68,7 +68,7 @@ movies = [
     },
     { 
         id: 6, 
-        name: { en:"Aven", th: "กักห้อง เกมโหด" }, 
+        name: { en:"Avengers: Endgame", th: "อเวนเจอร์ส:เผด็จศึก" }, 
         poster: "https://www.majorcineplex.com/uploads/movie/2584/thumb_2584.jpg", 
         wallpaper: "https://initiate.alphacoders.com/images/975/cropped-3360-1890-975508.jpg" ,
         // director: "อดัม โรบิเทล", 
