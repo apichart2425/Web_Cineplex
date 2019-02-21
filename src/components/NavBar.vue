@@ -1,13 +1,13 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg  navbar-light bg-light ">
-      <a href="#" class="navbar-left"><img src="../assets/img/logo.png" img style="width: 150px;"></a>
+      <a href="#" class="navbar-left ml-5"><img src="../assets/img/logo.png" img style="width: 150px;"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <router-link to="/">
