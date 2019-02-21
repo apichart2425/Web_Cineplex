@@ -68,15 +68,12 @@ movies = [
     },
     { 
         id: 6, 
-        name: { en:"Escape Room", th: "กักห้อง เกมโหด" }, 
-        poster: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/15AlGTlaZa3W2zmIL4ehnCh8Xe0.jpg", 
-        wallpaper: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uFAx9PLH7KhPjWIQiqENal6VF5z.jpg" ,
+        name: { en:"Aven", th: "กักห้อง เกมโหด" }, 
+        poster: "https://www.majorcineplex.com/uploads/movie/2584/thumb_2584.jpg", 
+        wallpaper: "https://initiate.alphacoders.com/images/975/cropped-3360-1890-975508.jpg" ,
         // director: "อดัม โรบิเทล", 
         // actors: "เทย์เลอร์ รัสเซลล์, เดบาร่าห์ แอน โวลล์, โลแกน มิลเลอร์", 
         categories: [9, 10],
         synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;Escape Room เกิดขึ้นเมื่อกลุ่มคนแปลกหน้าต้องมารวมกันในห้องปริศนาที่ไร้ทางออก โดยมีกล้องวงจรปิดเฝ้าดูพวกเขาจากภายนอก วิธีเดียวที่จะออกจากห้องนี้ได้ จะต้องไขรหัสลับของห้องให้ได้ ถ้าแก้ไขรหัสไม่สำเร็จจะต้องตาย แต่หากใครเป็นผู้ชนะของเกมส์นี้จะได้รับรางวัลเป็นเงินหมื่นดอลล่าร์!! แต่เรื่องราวไม่ง่ายขนาดนั้นเพราะคนที่บงการอยู่เบื้องหลังเกมส์นี้มีวัตถุประสงค์บางอย่าง?&nbsp;</p><br><p></p></div>`
     }
 ]
-
-//https://www.majorcineplex.com/uploads/movie/2584/thumb_2584.jpg
-//https://initiate.alphacoders.com/images/975/cropped-3360-1890-975508.jpg
