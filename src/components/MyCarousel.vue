@@ -25,7 +25,6 @@
         </div>
       </slide>
     </carousel>
-
   </div>
 </template>
 
@@ -41,7 +40,7 @@
   .el {
     background:
       linear-gradient(to bottom, transparent, black) no-repeat bottom;
-    background-size: 100% 50%;
+    background-size: 100% 57.5%;
     height: inherit;
     background-position: bottom;
     border: 1px dotted black;
