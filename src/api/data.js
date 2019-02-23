@@ -76,7 +76,66 @@ movies = [
         actors: "Brie Larson, Bradley Cooper, Evangeline Lilly", 
         categories: [9, 10],
         synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;เรื่องราวการปิดจักรวาลมาร์เวลเฟส 3 เหตุการณ์ภายหลังจากที่ธานอสดีดนิ้วล้างครึ่งจักรวาล เหล่าฮีโร่ที่เหลือรอดจะหาทางกอบกู้จักรวาลนี้คืนมาได้อย่างไร โดยในภาคนี้จะมีตัวเด็ดอย่างกัปตันมาร์เวลมาร่วมเสริมทัพด้วย&nbsp;</p><br><p></p></div>`
-    }
+    },
+    { 
+        id: 7, 
+        name: { en:"Spider-Man: Far From Home", th: " " }, 
+        poster: "https://lh3.googleusercontent.com/aZyGy5YQR9MOlwDAv16ausRi1McYoLmY3Wrfrpbs19_yRJwDRrpNLD8leObOvS-22X4ogYRBXprZC1qyVmOH2g=w260", 
+        wallpaper: "https://lh3.googleusercontent.com/YbEPW8ZBPY-CYUhsrCW99MQplbb2HL5Jh2g-RfvzGBIdgft3FYWxIj5-GSwp-FfU2IXFGzufIzLLFh3tN0k3Bg=w1920",      
+        director: "Jon Watts", 
+        actors: "Jake Gyllenhaal, Tom Holland, Marisa Tomei", 
+        categories: [1],
+        synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;เรื่องราวการปิดจักรวาลมาร์เวลเฟส 3 เหตุการณ์ภายหลังจากที่ธานอสดีดนิ้วล้างครึ่งจักรวาล เหล่าฮีโร่ที่เหลือรอดจะหาทางกอบกู้จักรวาลนี้คืนมาได้อย่างไร โดยในภาคนี้จะมีตัวเด็ดอย่างกัปตันมาร์เวลมาร่วมเสริมทัพด้วย&nbsp;</p><br><p></p></div>`
+    },
+    { 
+        id: 8, 
+        name: { en:"", th: "สวนสนุกสุดอัศจรรย์" }, 
+        poster: "https://lh3.googleusercontent.com/48a3OvgNnmQi4W8lbciaJqbHTYj3EuV-g0AewvC3HB69qKfMrnpPY9sC86tqlFpanYtZhyqqZPl4h_KBH1dJ=w260", 
+        wallpaper: "https://lh3.googleusercontent.com/lgtt8tU6YywkRmFmHnNlp0ykucK-98b-p0WeMOz6ZMi5zFQbdxpkWRs1gUlI-Egi__st_WdLuNxz6_o6NEsd=w1920" ,
+        director: "Josh Appelbaum, André Nemec", 
+        actors: "Ken Hudson Campbell, Brianna Denski, Jennifer Garner", 
+        categories: [3],
+        synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;เรื่องราวการปิดจักรวาลมาร์เวลเฟส 3 เหตุการณ์ภายหลังจากที่ธานอสดีดนิ้วล้างครึ่งจักรวาล เหล่าฮีโร่ที่เหลือรอดจะหาทางกอบกู้จักรวาลนี้คืนมาได้อย่างไร โดยในภาคนี้จะมีตัวเด็ดอย่างกัปตันมาร์เวลมาร่วมเสริมทัพด้วย&nbsp;</p><br><p></p></div>`
+    },
+    { 
+        id: 9, 
+        name: { en:" ", th: "รวมพลังมาสค์ไรเดอร์" }, 
+        poster: "https://lh3.googleusercontent.com/kCfNRZJsGthwaWGbJ6OslaBwglGChbl7SwmQdygJ0-rZ9mKjnESVyn-18p0RlLRZh7vHKx1pqqxvjW07YBp-=w260", 
+        wallpaper: "https://lh3.googleusercontent.com/S8cJvgDJR2MTX1ucIPJDCL2c5aNb9_kV40rV26MWG0tGaEw84PtT21V9eMv7Jvo4WjfD8U-sWEypYRT1sLN0Tw=w1920" ,
+        director: "Kyohei Yamaguchi", 
+        actors: "Eiji Akaso, Shunsuke Daito, Nayuta Fukuzaki", 
+        categories: [1],
+        synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;เรื่องราวการปิดจักรวาลมาร์เวลเฟส 3 เหตุการณ์ภายหลังจากที่ธานอสดีดนิ้วล้างครึ่งจักรวาล เหล่าฮีโร่ที่เหลือรอดจะหาทางกอบกู้จักรวาลนี้คืนมาได้อย่างไร โดยในภาคนี้จะมีตัวเด็ดอย่างกัปตันมาร์เวลมาร่วมเสริมทัพด้วย&nbsp;</p><br><p></p></div>`
+    },
+    { 
+        id: 10, 
+        name: { en:"Five Feet Apart", th: " " }, 
+        poster: "https://lh3.googleusercontent.com/gzXxrgPukzn9dIGBuQ33d-hdWvU587-gCRd42DAfA_E45O6J7aZnLFGb2VMaMf1AEj1wcYn1EyzyLIxERy1n=w260", 
+        wallpaper: "https://lh3.googleusercontent.com/0bzxpZFgTGDlx7FSqbmnJDFIGULULRHvqGxbgmxMKAXlNBDpGomp5aObfwsymHbvqKr8uC3093PCLAlzTCxNng=w1920" ,
+        director: "Justin Baldoni", 
+        actors: "Claire Forlani, Haley Lu Richardson, Cole Sprouse", 
+        categories: [9, 10],
+        synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;เรื่องราวการปิดจักรวาลมาร์เวลเฟส 3 เหตุการณ์ภายหลังจากที่ธานอสดีดนิ้วล้างครึ่งจักรวาล เหล่าฮีโร่ที่เหลือรอดจะหาทางกอบกู้จักรวาลนี้คืนมาได้อย่างไร โดยในภาคนี้จะมีตัวเด็ดอย่างกัปตันมาร์เวลมาร่วมเสริมทัพด้วย&nbsp;</p><br><p></p></div>`
+    },
+    { 
+        id: 11, 
+        name: { en:"John Wick: Chapter 3", th: " " }, 
+        poster: "https://lh3.googleusercontent.com/ZAiQ1CmS7lheM8VXV5qNtpldyfHgp2FiKX7NucQqSvDbWVya63cW0KyEgZ7aL_3CTefm2W-I_01g5I8ptoFpzg=w260", 
+        wallpaper: "http://hdqwalls.com/wallpapers/john-wick-3-parabellum-movie-2019-8k-08.jpg" ,
+        director: "Chad Stahelski", 
+        actors: "Anjelica Huston, Jason Mantzoukas, Keanu  Reeves", 
+        categories: [1],
+        synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;เรื่องราวการปิดจักรวาลมาร์เวลเฟส 3 เหตุการณ์ภายหลังจากที่ธานอสดีดนิ้วล้างครึ่งจักรวาล เหล่าฮีโร่ที่เหลือรอดจะหาทางกอบกู้จักรวาลนี้คืนมาได้อย่างไร โดยในภาคนี้จะมีตัวเด็ดอย่างกัปตันมาร์เวลมาร่วมเสริมทัพด้วย&nbsp;</p><br><p></p></div>`
+    },{ 
+        id: 12, 
+        name: { en:"Pokemon: Detective Pikachu", th: " " }, 
+        poster: "https://lh3.googleusercontent.com/vg5rd4x71XN3bznn7vTdz6H-E3xUoJSFgpZ5iX7q1OEnZ9K1IUmluHAGZR7e4PL2ZBxPvYCcXySV1eybTOb9=w260", 
+        wallpaper: "https://lh3.googleusercontent.com/LALvHlm7fWtjVmto5sdkvOOzOzpSm9ogNcRT8rFO8K6s0_ct-4iMT2y9flFK_ro4gwUGtAKoH4fsKADqYSwR=w1920" ,
+        director: " Rob Letterman", 
+        actors: "Kathryn Newton, Ryan Reynolds, Suki Waterhouse", 
+        categories: [1],
+        synopsis: `<div class="desclistsynopsis"><p></p><p>&nbsp;เรื่องราวการปิดจักรวาลมาร์เวลเฟส 3 เหตุการณ์ภายหลังจากที่ธานอสดีดนิ้วล้างครึ่งจักรวาล เหล่าฮีโร่ที่เหลือรอดจะหาทางกอบกู้จักรวาลนี้คืนมาได้อย่างไร โดยในภาคนี้จะมีตัวเด็ดอย่างกัปตันมาร์เวลมาร่วมเสริมทัพด้วย&nbsp;</p><br><p></p></div>`
+    },
 ]
 
 seats =[

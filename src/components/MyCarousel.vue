@@ -1,8 +1,7 @@
 <template>
   <div class="">
-    <carousel :perPage="1" :paginationEnabled="false" :autoplayHoverPause="true" :loop="true">
-      <!-- :autoplayTimeout="5000"  :autoplay="true"-->
-      <slide v-for="movie,index_img in movies">
+    <carousel :perPage="1" :paginationEnabled="false" :autoplayHoverPause="true" :autoplayTimeout="5000"  :autoplay="true" :loop="true">
+\      <slide v-for="movie,index_img in movies">
         <div class="size_carousel" :style="{'background-image':'url('+movie.wallpaper+')', }">
           <div class="el">
             <div class="ml-5">

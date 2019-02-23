@@ -39,6 +39,7 @@
     <div class="row ">
       <div class="card-deck overflow-hiden">
         <div class="col-md-3 " v-for="movie in movies">
+          <router-link to="/movie">
           <div class="card  my-2">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <img :src="movie.poster" class="card-img-top rounded mx-auto d-block">
@@ -49,6 +50,7 @@
               <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
             </div>
           </div>
+        </router-link>
         </div>
       </div>
     </div>
