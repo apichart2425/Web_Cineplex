@@ -18,7 +18,7 @@
           </li>
           <li class="nav-item">
             <router-link to="/Movie">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">ที่นั่ง</a>
             </router-link>
           </li>
           <li class="nav-item dropdown">

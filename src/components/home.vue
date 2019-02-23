@@ -2,8 +2,11 @@
   <div>
     <div id="home">
       <!-- <img src="../assets/logo.png"> -->
-      <MyCarousel class="mx-3" :movies="movies" :categories="categories"/>
-      <CardMovie :movies="movies"/>
+      <MyCarousel class="mx-3" :movies="movies" :categories="categories" />
+      <br>
+      <div class="container">
+        <CardMovie :movies="movies" />
+      </div>
     </div>
   </div>
 </template>
@@ -11,16 +14,19 @@
 <script>
   import MyCarousel from "@/components/MyCarousel"
   import CardMovie from "@/components/CardMovie"
-  
+
   export default {
     name: 'Home',
-    components: {MyCarousel, CardMovie},
-    data () {
-    return {
-      movies: movies,
-      categories:categories,
+    components: {
+      MyCarousel,
+      CardMovie
+    },
+    data() {
+      return {
+        movies: movies,
+        categories: categories,
+      }
     }
-  }
   }
 
 </script>
