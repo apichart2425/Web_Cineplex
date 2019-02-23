@@ -5,7 +5,8 @@
       <MyCarousel class="mx-3" :movies="movies" :categories="categories" />
       <br>
       <div class="container">
-        <CardMovie :movies="movies" />
+        <TabMenuBar/>
+        <CardMovie :movies="movies" :categories="categories" />
       </div>
     </div>
   </div>
@@ -14,12 +15,14 @@
 <script>
   import MyCarousel from "@/components/MyCarousel"
   import CardMovie from "@/components/CardMovie"
+  import TabMenuBar from "@/components/TabMenuBar"
 
   export default {
     name: 'Home',
     components: {
       MyCarousel,
-      CardMovie
+      CardMovie,
+      TabMenuBar,
     },
     data() {
       return {
