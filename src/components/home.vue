@@ -3,15 +3,18 @@
     <div id="home">
       <!-- <img src="../assets/logo.png"> -->
       <MyCarousel class="mx-3" :movies="movies" :categories="categories"/>
+      <CardMovie :movies="movies"/>
     </div>
   </div>
 </template>
 
 <script>
   import MyCarousel from "@/components/MyCarousel"
+  import CardMovie from "@/components/CardMovie"
+  
   export default {
     name: 'Home',
-    components: {MyCarousel},
+    components: {MyCarousel, CardMovie},
     data () {
     return {
       movies: movies,
