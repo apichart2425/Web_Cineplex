@@ -2,6 +2,7 @@
   <div class="">
     <carousel :perPage="1" :paginationEnabled="false" :autoplayHoverPause="false" :autoplay="true" :loop="true"
       :autoplayTimeout="5000">
+
       <slide v-for="movie,index_img in movies">
         <div class="size_carousel" :style="{'background-image':'url('+movie.wallpaper+')'}">
           <div class="container">
@@ -30,7 +31,6 @@
 </template>
 
 <script>
-
   export default {
     name: 'MyCarousel',
     props: ['movies', 'categories'],
