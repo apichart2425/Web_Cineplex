@@ -28,6 +28,7 @@
       return {
         movies: movies,
         categories: categories,
+        seat: seats,
       }
     }
   }
