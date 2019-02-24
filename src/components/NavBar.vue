@@ -21,7 +21,7 @@
               <a class="nav-link" href="#">ที่นั่ง</a>
             </router-link>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Dropdown
@@ -32,10 +32,10 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+          </li> -->
+          <router-link to="/TimeMovie">
+            <a class="nav-link" href="#">รอบหนัง</a>
+          </router-link>
         </ul>
       </div>
     </nav>

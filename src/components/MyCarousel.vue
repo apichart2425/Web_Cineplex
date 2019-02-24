@@ -1,7 +1,7 @@
 <template>
-  <div class="">
+  <div class="font">
     <carousel :perPage="1" :paginationEnabled="false" :autoplayHoverPause="true" :autoplayTimeout="5000"  :autoplay="true" :loop="true">
-\      <slide v-for="movie,index_img in movies">
+      <slide v-for="movie,index_img in movies">
         <div class="size_carousel" :style="{'background-image':'url('+movie.wallpaper+')', }">
           <div class="el">
             <div class="ml-5">
@@ -36,6 +36,9 @@
 </script>
 
 <style scoped>
+  font{
+    font-family: SukhumvitTadmai,Sukhumvit Set,sans-serif;
+  }
   .el {
     background:
       linear-gradient(to bottom, transparent, black) no-repeat bottom;
