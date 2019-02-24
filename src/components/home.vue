@@ -5,7 +5,6 @@
       <MyCarousel class="mx-3" :movies="movies" :categories="categories" />
       <br>
       <div class="container">
-        <!-- <TimeMovie/> -->
         <CardMovie :movies="movies" :categories="categories" />
       </div>
     </div>
@@ -15,13 +14,11 @@
 <script>
   import MyCarousel from "@/components/MyCarousel"
   import CardMovie from "@/components/CardMovie"
-  import TimeMovie from "@/components/TimeMovie"
   export default {
     name: 'Home',
     components: {
       MyCarousel,
       CardMovie,
-      TimeMovie,
     },
     data() {
       return {

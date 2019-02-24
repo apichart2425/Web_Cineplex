@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Movie from '@/components/movie'
-import TimeMovie from '@/components/TimeMovie'
+import TheaterShowTime from '@/components/TheaterShowTime'
 import {
   homedir
 } from 'os';
@@ -21,9 +21,9 @@ export default new Router({
       component: Movie,
     },
     {
-      path: '/TimeMovie',
-      name: 'TimeMovie',
-      component: TimeMovie,
+      path: '/TheaterShowTime',
+      name: 'TheaterShowTime',
+      component: TheaterShowTime,
     },
   ]
 })

@@ -8,6 +8,7 @@ import VueCarousel from 'vue-carousel'
 
 
 require("./api/data")
+require("./api/theater")
 
 Vue.use(VueRouter);
 Vue.use(VueCarousel);

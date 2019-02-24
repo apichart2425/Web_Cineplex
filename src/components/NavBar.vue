@@ -33,7 +33,7 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li> -->
-          <router-link to="/TimeMovie">
+          <router-link to="/TheaterShowTime">
             <a class="nav-link" href="#">รอบหนัง</a>
           </router-link>
         </ul>

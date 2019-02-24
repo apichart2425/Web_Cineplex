@@ -1,25 +1,27 @@
 <template>
-  <div>
-    <div class="card mb-3">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <div class="size_carousel" :style="{'background-image':'url('+movies[5].poster+')', }">
+  <div class="jumbotron">
+    <div class="container mt-5" v-for="theater in theater">
+      <div class="showtime-cinema"><a href=""></a>
+        {{theater.name}}
+      </div>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-2">
+            <p class="">Theater A</p>
+            <!-- <div class="size_carousel" :style="{'background-image':'url('+movies[5].poster+')', }"></div> -->
+            <!-- <img src="../assets/img/logo.png" class="size_carousel card-img" alt="..."> -->
           </div>
-          <!-- <img :src="movie[5].poster" class="size_carousel card-img" alt="..."> -->
-        </div>
-        <div class="col-md-8 showtime-box">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            
-          </div>
-          <ul class="time-list nav">
-              <li class="time-item nav-item"><button class="button button-showtime active">16:45</button></li>
-              <li class="time-item nav-item"><button class="button button-showtime">19:30</button></li>
-              <li class="time-item nav-item"><button class="button button-showtime">22:15</button></li>
+          <div class="col-md-10 showtime-box">
+            <div class="card-body">
+              <!-- <h5 class="card-title"></h5> -->
+              <p class="card-text">TH|EN</p>
+              <p class="card-text"><small class="text-muted">ความยาวหนัง : ......</small></p>
+
+            </div>
+            <ul class="time-list nav">
+              <li class="time-item nav-item"  v-for="time in timer"><button class="button button-showtime">{{time.time}}</button></li>
             </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -28,12 +30,14 @@
 
 <script>
   export default {
-    name: 'TabMenuBar',
+    name: 'TimeMovie',
     components: {},
     data() {
       return {
         movies: movies,
         categories: categories,
+        theater: theater,
+        timer: timer,
       }
     }
   }
@@ -41,12 +45,32 @@
 </script>
 
 <style scoped>
-  *{
+  * {
     text-align: left;
   }
+
+  .showtime-cinema {
+    font-size: 14px;
+    color: #114c97;
+    padding: 15px;
+    line-height: 1;
+    font-weight: 600;
+    background-color: #e0e5f2;
+  }
+
+  .left-section {
+    text-align: center;
+    padding: 37px 0;
+  }
+
+  .text_p {
+    text-align: center;
+
+  }
+
   .size_carousel {
-    height: 60vh;
-    width: 40vh;
+    height: 20vh;
+    width: 20vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -62,14 +86,17 @@
     margin: 0;
     list-style: none;
   }
-.showtime-box .time-item {
+
+  .showtime-box .time-item {
     margin-right: 20px;
-}
-.showtime-box .time-item {
+  }
+
+  .showtime-box .time-item {
     float: left;
     margin-right: 20px;
     margin-bottom: 15px;
-}
+  }
+
   .button {
     cursor: pointer;
     text-align: center;
@@ -85,7 +112,7 @@
     box-sizing: border-box;
     position: relative;
     transition: all .2s ease-out;
-}
+  }
 
   .button-showtime {
     min-width: 110px;
@@ -100,17 +127,25 @@
     line-height: 1;
     background: none;
   }
+
   .button-showtime.active {
     color: #fff;
     border: none;
     font-weight: 600;
     background: #2f66cd;
-    background: linear-gradient(90deg,#2f66cd,#4db0db 75%,#5ab6de);
-}
-.button-showtime:hover:enabled {
+    background: linear-gradient(90deg, #2f66cd, #4db0db 75%, #5ab6de);
+  }
+
+  .button-showtime:hover:enabled {
     color: #fff;
     border-color: #2d64cf;
     background-color: #2d64cf;
-}
+  }
+
+  .jumbotron {
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+  }
 
 </style>

@@ -34,6 +34,7 @@
         </div>
       </div>
     </div>
+    
     <h1 class="display-4" style="text-align: center">ภาพยนตร์</h1>
 
     <div class="row ">

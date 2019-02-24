@@ -52,9 +52,7 @@
     height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: center;
-     */
-
+    background-position: center;
   }
 
   .x {
