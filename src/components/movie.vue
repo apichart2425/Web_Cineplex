@@ -47,24 +47,24 @@
               <div class="select" style="text-align: center">
                 <h3>ที่นั่งที่เลือก</h3>
                 <div class="selected-seat">
-                  <h5 style="text-align: left"  v-for="seatDetail, index in seatName">
+                  <h5 style="text-align: left" v-for="seatDetail, index in seatName">
                     <div class="row">
                       <div class="col-4">
                         <h4>{{seatDetail}}</h4>
                       </div>
                       <div class="col-8">
-                        <select style="width: 100%" v-model="form.parent_id[index]">
-                            <option value="1">Child</option>
-                            <option value="2">Adult</option>
-                          </select>
-                        </div>
+                        <select style="width: 100%" v-model="form.parent_id[index]">             
+                          <option value="120">Child</option>
+                          <option value="180">Adult</option>
+                        </select>
+                      </div>
                     </div>
                   </h5>
                 </div>
               </div>
               <div class="total-price">
-                <h3 style="margin-top: 5%; text-align: center">ราคารวม{{form.parent_id}}</h3>
-                <h2 style="text-align: center"><b>{{ seatName.length*120 }}</b></h2>
+                <h3 style="margin-top: 5%; text-align: center">ราคารวม</h3>
+                <h2 style="text-align: center"><b>{{total}}</b></h2>
               </div>
               <div class="button" style="text-align: center; margin-top: 10%">
                 <button type="button" class="btn btn-primary" style="width: 50%; height: 100%;">Success</button>
@@ -81,6 +81,15 @@
 <script>
 
   export default {
+    computed: {
+      total: function () {
+        let sum = 0;
+        for (let i = 0; i < this.form.parent_id.length; i++) {
+          sum += (parseInt(this.form.parent_id[i]));
+        }
+        return sum;
+      }
+    },
     data() {
       return {
         form: {
@@ -93,10 +102,6 @@
         selectseat: selectseat
       }
     }
-  }
-
-  function addSeat(seat_id) {
-
   }
 </script>
 
