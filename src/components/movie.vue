@@ -54,11 +54,11 @@
                       </div>
                       <div class="col-8">
                         <!-- <select style="width: 100%" v-model="form.parent_id[index]">             
-                          <option value="120">Child</option>
+                          <option value="120">Child</option>    
                           <option value="180">Adult</option>
                         </select>
                       </div> -->
-                      <select style="width: 100%" v-model="form.parent_id[index]">
+                      <select style="width: 100%"  v-model="form.parent_id[index]">
                         <option value="100">Child</option>
                         <option value="200">Adult</option>
                       </select>
