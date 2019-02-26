@@ -11,11 +11,11 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">
+            <a class="nav-link active" data-toggle="tab" href="#login" role="tab">
               เข้าสู่ระบบ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">
+            <a class="nav-link" data-toggle="tab" href="#regis" role="tab">
               สมัครสมาชิก</a>
           </li>
         </ul>
@@ -23,7 +23,7 @@
         <!-- Tab panels -->
         <div class="tab-content">
           <!--Panel 1-->
-          <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+          <div class="tab-pane fade in show active" id="login" role="tabpanel">
 
             <!--Body-->
             <div class="modal-body mb-1">
@@ -52,7 +52,7 @@
           <!--/.Panel 1-->
 
           <!--Panel 2-->
-          <div class="tab-pane fade" id="panel2" role="tabpanel">
+          <div class="tab-pane fade" id="regis" role="tabpanel">
 
             <!--Body-->
             <div class="modal-body">

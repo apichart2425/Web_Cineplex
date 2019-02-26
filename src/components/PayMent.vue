@@ -74,8 +74,10 @@
                     type="text"
                     id="modalLRInput8"
                     class="form-control form-control-sm validate"
+                    placeholder="ชื่อผู้ถือบัตร"
+                    required=""
                   >
-                  <label data-error="wrong" data-success="right" for="modalLRInput8">ชื่อผู้ถือบัตร</label>
+                  <!-- <label data-error="wrong" data-success="right" for="modalLRInput8">ชื่อผู้ถือบัตร</label> -->
                 </div>
 
                 <div class="md-form form-sm mb-5">
@@ -84,8 +86,10 @@
                     type="text"
                     id="modalLRInput9"
                     class="form-control form-control-sm validate"
+                    placeholder="หมายเลขบัตร"
+                    required=""
                   >
-                  <label data-error="wrong" data-success="right" for="modalLRInput9">หมายเลขบัตร</label>
+                  <!-- <label data-error="wrong" data-success="right" for="modalLRInput9">หมายเลขบัตร</label> -->
                 </div>
 
                 <div class="md-form form-sm mb-4">
@@ -94,8 +98,10 @@
                     type="text"
                     id="modalLRInput10"
                     class="form-control form-control-sm validate"
+                    placeholder="ดด/ปปปป"
+                    required=""
                   >
-                  <label data-error="wrong" data-success="right" for="modalLRInput10">ดด/ปปปป</label>
+                  <!-- <label data-error="wrong" data-success="right" for="modalLRInput10">ดด/ปปปป</label> -->
                 </div>
 
                 <div class="md-form form-sm mb-4">
@@ -104,8 +110,10 @@
                     type="text"
                     id="modalLRInput11"
                     class="form-control form-control-sm validate"
+                    placeholder="CVV"
+                    required=""
                   >
-                  <label data-error="wrong" data-success="right" for="modalLRInput11">CVV</label>
+                  <!-- <label data-error="wrong" data-success="right" for="modalLRInput11">CVV</label> -->
                 </div>
               </div>
               <!--Footer-->
