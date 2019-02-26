@@ -1,53 +1,56 @@
 <template>
-  <div class="jumbotron pt-1">
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6 btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary text-position" v-for="dates in dates">
-          <span>{{dates.name}}</span><br>
-          <span style="font-size: 2.5vh;">{{dates.day}}</span>
-        </button>
+  <div class="pt-1">
+    <div class="container mt-5" v-for="theaters,index in theater">
+      <div class="showtime-cinema">{{theaters.name}}</div>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-2">
+            <h4 class="mt-5" style="text-align:center;">{{theaters.theater.id}}</h4>
+            <!-- <div class="size_carousel" :style="{'background-image':'url('+movies[5].poster+')', }"></div> -->
+            <!-- <img src="../assets/img/logo.png" class="size_carousel card-img" alt="..."> -->
+          </div>
+          <div class="col-md-10 showtime-box">
+            <div class="card-body">
+              <!-- <h5 class="card-title"></h5> -->
+              <p class="card-text">TH|EN</p>
+              <p class="card-text">
+                <small class="text-muted">ความยาวหนัง : 120 min</small>
+              </p>
+            </div>
+            <ul class="time-list nav">
+              <li class="time-item nav-item" v-for="line,index_time in theaters.times">
+                <router-link to="/Movie">
+                  <button class="button button-showtime">{{timer[line-1].time_line}}</button>
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col-md-3"></div>
     </div>
-    <Date/>
   </div>
 </template>
 
 <script>
-import Date from "@/components/Date";
-
 export default {
-  name: "TimeMovie",
-  components: { Date },
+  name: "Date",
+  components: {},
   data() {
     return {
       movies: movies,
       categories: categories,
       theater: theater,
-      timer: timer,
-      dates: [
-        { id: 1, name: "Monday", day: "17/2/2029" },
-        { id: 2, name: "Tuesday", day: "12/3/2029" },
-        { id: 3, name: "Wednesday", day: "11/4/2029" },
-        { id: 4, name: "Thursday", day: "14/5/2029" },
-        { id: 5, name: "Friday", day: "15/6/2029" },
-        { id: 6, name: "Sunday", day: "10/7/2029" },
-        { id: 7, name: "Saturay", day: "18/8/2029" }
-      ]
+      timer: timer
     };
   }
 };
 </script>
 
-<style scoped>
-* {
+<style scoped > * {
   text-align: left;
   font-size: 4vh;
 }
-.text-position{
-  text-align: center;
-}
+
 .showtime-cinema {
   font-size: 20px;
   color: #114c97;

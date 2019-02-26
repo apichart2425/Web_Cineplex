@@ -28,13 +28,10 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/Movie">
+            <router-link to="/CardMovie">
               <a class="nav-link" href="#">ภาพยนตร์</a>
             </router-link>
           </li>
-          <router-link to="/TheaterShowTime">
-            <a class="nav-link" href="#">as</a>
-          </router-link>
         </ul>
       </div>
       <div>

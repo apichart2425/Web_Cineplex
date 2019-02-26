@@ -1,9 +1,6 @@
 <template>
   <div>
-    <button>
-    <!-- <iframe width="1120" height="630" src="https://www.youtube.com/watch?v=vj1n7fq2gFQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe> -->
-    </button>
+    <iframe class="iframe_size" src="https://www.youtube.com/embed/0LHxvxdRnYc"></iframe>
   </div>
 </template>
 
@@ -11,11 +8,14 @@
 export default {
   name: "Video",
 
-  data() {},
+  data() {}
 };
-
 </script>
 
 <style scoped>
+.iframe_size {
+  width: 100%;
+  height: 60vh;
+}
 
 </style>

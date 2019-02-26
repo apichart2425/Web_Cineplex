@@ -1,11 +1,14 @@
 <template>
-  <div>
+  <div class="container">
     <div class="row shadow p-3 bg-white rounded showtime-dropdown">
       <!-- Search -->
       <div class="col-md-3 mt-3">
         <div class>
-          <select v-model="selected" class="input-group size_select">
-            <option v-for="categorie in categories" value="categorie.id">{{categorie.name}}</option>
+          <select v-model="searchCategorie" @change="onchange()" class="input-group size_select">
+            <optgroup label="Categorie">
+              <option value="All">All</option>
+              <option v-for="categorie in categories" :value="categorie.id">{{categorie.name}}</option>
+            </optgroup>
           </select>
           <br>
         </div>
@@ -14,8 +17,11 @@
       <!-- โรงภาพยนตร์ -->
       <div class="col-md-3 mt-3">
         <div class="input-group">
-          <select v-model="selected" class="input-group size_select">
-            <option v-for="theater in theater" value="categorie.id">{{theater.name}}</option>
+          <select class="input-group size_select">
+            <optgroup label="Theater">
+              <option disabled selected value>โรงภาพยนตร์</option>
+              <option v-for="theater in theater" value="categorie.id">{{theater.name}}</option>
+            </optgroup>
           </select>
           <br>
         </div>
@@ -44,9 +50,9 @@
 
     <h1 class="display-4" style="text-align: center">ภาพยนตร์</h1>
 
-    <div class>
+    <div class="container">
       <div class="card-deck">
-        <div class="col-md-3" v-for="movie in searchResult">
+        <div class="col-md-3" v-for="movie in searchResult" v-show="movie.check">
           <router-link to="/TheaterShowTime">
             <div class="card my-2">
               <img :src="movie.poster" class="card-img-top mx-auto">
@@ -65,10 +71,12 @@
 <script>
 export default {
   name: "cardmovie",
-  props: ["movies", "categories"],
   data() {
     return {
       theater: theater,
+      movies: movies,
+      categories: categories,
+      searchCategorie: "All",
       searchText: "",
       select_theater: ""
     };
@@ -82,15 +90,37 @@ export default {
         return isMatchTitleEn | isMatchTitleTh;
       });
     }
+  },
+  methods: {
+    onchange: function() {
+      for (var i = 0; i < this.movies.length; i++) {
+        if (this.searchCategorie == "All") {
+          this.movies[i].check = true;
+        } else {
+          if (this.movies[i].categories.includes(this.searchCategorie)) {
+            this.movies[i].check = true;
+          } else {
+            this.movies[i].check = false;
+          }
+        }
+      }
+    }
   }
 };
 </script>
 
 <style scoped>
-.showtime-dropdown {
-  transform: translateY(-40%);
+  body{
+    margin-top: 5vh;
+  }
+h4,
+h5 {
+  color: darkslategrey;
 }
 
+.showtime-dropdown {
+  transform: translateY(-35%);
+}
 .home .showtime-dropdown {
   width: 80%;
   padding: 50px;

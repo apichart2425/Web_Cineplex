@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron pt-5">
+  <div class="jumbotron pt-5 mb-0 pb-0">
     <div class="container">
       <div class="row">
         <!-- img -->
@@ -9,9 +9,11 @@
 
         <!-- content -->
         <div class="col-md-9 mt-0 text shadow showtime-dropdown bg-white rounded">
-          <h1>{{movie[0].name.en}}</h1>
-          <span>{{movie[0].name.th}}</span>
+          <h1>{{movie[0].name.en}} - {{movie[0].name.th}}</h1>
+          <span>Director : {{movie[0].director}}</span><br>
+          <label ><u> ตัวอย่างภาพยนตร์ </u></label>
           <span v-html="movie[0].synopsis"></span>
+          
           <iframe class="iframe_size" src="https://www.youtube.com/embed/0LHxvxdRnYc"></iframe>
         </div>
       </div>
@@ -37,15 +39,22 @@ export default {
 </script>
 
 <style scoped>
-*{
+* {
   font-size: 5vh;
 }
- h1{
-   font-size: 6vh;
- }
+label{
+  font-size: 3vh;
+}
+.iframe_size {
+  width: 100%;
+  height: 60vh;
+}
+h1 {
+  font-size: 6vh;
+}
 /* *{font-family: 'Designil Font', 'Helvetica', sans-serif;} */
 body {
-  font-family:"Sukhumvit Set",sans-serif; 
+  font-family: "Sukhumvit Set", sans-serif;
 }
 .iframe_size {
   width: 100%;
