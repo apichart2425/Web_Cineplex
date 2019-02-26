@@ -27,6 +27,8 @@
 </script>
 
 <style scoped>
-
+ *{
+   font-size: 4vh;
+ }
 
 </style>

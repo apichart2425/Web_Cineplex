@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg ">
       <router-link to="/">
         <a class="navbar-left ml-5">
           <img src="../assets/img/logo.png" img style="width: 150px;">
@@ -22,30 +22,18 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <router-link to="/">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="#">หน้าแรก
                 <span class="sr-only">(current)</span>
               </a>
             </router-link>
           </li>
           <li class="nav-item">
             <router-link to="/Movie">
-              <a class="nav-link" href="#">ที่นั่ง</a>
+              <a class="nav-link" href="#">ภาพยนตร์</a>
             </router-link>
           </li>
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>-->
           <router-link to="/TheaterShowTime">
-            <a class="nav-link" href="#">รอบหนัง</a>
+            <a class="nav-link" href="#">as</a>
           </router-link>
         </ul>
       </div>
@@ -75,6 +63,7 @@
 
 <style scoped>
 *{
-    font-size: 2.5vh;
+    font-size: 4vh;
+    color : black;
 }
 </style>

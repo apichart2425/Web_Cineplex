@@ -14,7 +14,7 @@
               <!-- <h5 class="card-title"></h5> -->
               <p class="card-text">TH|EN</p>
               <p class="card-text">
-                <small class="text-muted">ความยาวหนัง : ......</small>
+                <small class="text-muted">ความยาวหนัง : 120 min</small>
               </p>
             </div>
             <ul class="time-list nav">
@@ -49,6 +49,7 @@ export default {
 <style scoped>
 * {
   text-align: left;
+  font-size: 4vh;
 }
 
 .showtime-cinema {

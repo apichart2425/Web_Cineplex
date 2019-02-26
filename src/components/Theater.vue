@@ -37,7 +37,12 @@ export default {
 </script>
 
 <style scoped>
-
+*{
+  font-size: 5vh;
+}
+ h1{
+   font-size: 6vh;
+ }
 /* *{font-family: 'Designil Font', 'Helvetica', sans-serif;} */
 body {
   font-family:"Sukhumvit Set",sans-serif; 
@@ -48,7 +53,7 @@ body {
 }
 
 .showtime-dropdown {
-  transform: translateY(-5%);
+  transform: translateY(-10%);
 }
 
 .showtime-dropdown {
