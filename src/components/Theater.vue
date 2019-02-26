@@ -60,7 +60,7 @@
   }
 
   .size_carousel {
-    height: 60vh;
+    height: 40vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

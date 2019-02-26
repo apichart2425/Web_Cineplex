@@ -40,7 +40,7 @@
     <div class="">
       <div class="card-deck">
         <div class="col-md-3 " v-for="movie in searchResult">
-          <router-link to="/TheatherShowTime">
+          <router-link to="/TheaterShowTime">
             <div class="card my-2">
               <img :src="movie.poster" class="card-img-top mx-auto">
               <div class="card-body">
