@@ -28,13 +28,13 @@
             <!--Body-->
             <div class="modal-body mb-1">
               <div class="md-form form-sm mb-5">
-                <label data-error="wrong" data-success="right" for="modalLRInput1">อีเมล</label>
-                <input type="email" id="modalLRInput1" class="form-control" required="">
+                <!-- <label data-error="wrong" data-success="right" for="modalLRInput1">อีเมล</label> -->
+                <input type="email" id="modalLRInput1" class="form-control" required="" placeholder="อีเมล">
               </div>
 
               <div class="md-form form-sm mb-4">
-                <label data-error="wrong" data-success="right" for="modalLRInput2">รหัสผ่าน</label>
-                <input type="password" id="modalLRInput2" class="form-control" required="">
+                <!-- <label data-error="wrong" data-success="right" for="modalLRInput2">รหัสผ่าน</label> -->
+                <input type="password" id="modalLRInput2" class="form-control" required="" placeholder="รหัสผ่าน">
               </div>
               <div class="text-center mt-2">
                 <button class="btn btn-info ">เข้าสู่ระบบ</button>
@@ -43,8 +43,7 @@
             <!--Footer-->
             <div class="modal-footer">
               <div class="options text-center text-md-right mt-1">
-                <p>เป็นสมาชิกหรือไม่? <a href="#" class="blue-text">สมัครสมาชิก</a></p>
-                <p>ลืม <a href="#" class="blue-text">รหัสผ่าน?</a></p>
+                <p>เป็นสมาชิกหรือไม่?<a href="#" class="blue-text">สมัครสมาชิก</a> ลืม<a href="#" class="blue-text">รหัสผ่าน?</a></p>
               </div>
               <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal">ปิด</button>
             </div>
@@ -58,18 +57,18 @@
             <!--Body-->
             <div class="modal-body">
               <div class="md-form form-sm mb-5">
-                <label data-error="wrong" data-success="right" for="modalLRInput3">อีเมล</label>
-                <input type="email" id="modalLRInput3" class="form-control" required="">
+                <!-- <label data-error="wrong" data-success="right" for="modalLRInput3">อีเมล</label> -->
+                <input type="email" id="modalLRInput3" class="form-control" required="" placeholder="อีเมล">
               </div>
 
               <div class="md-form form-sm mb-5">
-                <label data-error="wrong" data-success="right" for="modalLRInput4">รหัสผ่าน</label>
-                <input type="password" id="modalLRInput4" class="form-control" required="">
+                <!-- <label data-error="wrong" data-success="right" for="modalLRInput4">รหัสผ่าน</label> -->
+                <input type="password" id="modalLRInput4" class="form-control" required="" placeholder="รหัสผ่าน">
               </div>
 
               <div class="md-form form-sm mb-4">
-                <label data-error="wrong" data-success="right" for="modalLRInput5">ยืนยันรหัสผ่าน</label>
-                <input type="password" id="modalLRInput5" class="form-control" required="">
+                <!-- <label data-error="wrong" data-success="right" for="modalLRInput5">ยืนยันรหัสผ่าน</label> -->
+                <input type="password" id="modalLRInput5" class="form-control" required="" placeholder="ยืนยันรหัสผ่าน">
               </div>
 
               <div class="text-center form-sm mt-2">

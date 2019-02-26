@@ -33,22 +33,24 @@
               <!--Body-->
               <div class="modal-body mb-1">
                 <div class="md-form form-sm mb-5">
-                  <i class="fas fa-envelope prefix"></i>
-                  <label data-error="wrong" data-success="right" for="modalLRInput6">อีเมล</label>
+                  <!-- <label for="modalLRInput6">อีเมล</label> -->
                   <input
                     type="email"
                     id="modalLRInput6"
-                    class="form-control form-control-sm validate"
+                    class="form-control"
+                    placeholder="อีเมล"
+                    required=""
                   >
                 </div>
 
                 <div class="md-form form-sm mb-4">
-                  <i class="fas fa-lock prefix"></i>
-                  <label data-error="wrong" data-success="right" for="modalLRInput7">ชื่อ-นามสกุล</label>
+                  <!-- <label for="modalLRInput7">ชื่อ-นามสกุล</label> -->
                   <input
                     type="text"
                     id="modalLRInput7"
-                    class="form-control form-control-sm validate"
+                    class="form-control"
+                    placeholder="ชื่อ-นามสกุล"
+                    required=""
                   >
                 </div>
               </div>
