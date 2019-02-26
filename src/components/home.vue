@@ -5,7 +5,7 @@
       <MyCarousel class="mx-3" :movies="movies" :categories="categories" />
       <br>
       <div class="container">
-        <CardMovie :movies="movies" :categories="categories" />
+        <CardMovie class="mt-0" :movies="movies" :categories="categories" />
       </div>
     </div>
   </div>

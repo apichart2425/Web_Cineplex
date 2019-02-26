@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg  navbar-bg-light">
+    <nav class="navbar navbar-expand-lg  navbar-bg-light bg-light">
       <router-link to="/">
         <a class="navbar-left ml-5">
           <img src="../assets/img/logo.png" img style="width: 150px;">
