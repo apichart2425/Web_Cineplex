@@ -12,7 +12,7 @@
           <h1>{{movie[0].name.en}}</h1>
           <span>{{movie[0].name.th}}</span>
           <span v-html="movie[0].synopsis"></span>
-          <iframe class="iframe_size" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+          <iframe class="iframe_size" src="https://www.youtube.com/embed/0LHxvxdRnYc"></iframe>
         </div>
       </div>
     </div>
@@ -37,9 +37,14 @@ export default {
 </script>
 
 <style scoped>
-.iframe_size{
+
+/* *{font-family: 'Designil Font', 'Helvetica', sans-serif;} */
+body {
+  font-family:"Sukhumvit Set",sans-serif; 
+}
+.iframe_size {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
 }
 
 .showtime-dropdown {
