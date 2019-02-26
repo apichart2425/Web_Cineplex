@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Theater/> -->
+    <Theater/>
     <TimeMovie/>
   </div>
 </template>

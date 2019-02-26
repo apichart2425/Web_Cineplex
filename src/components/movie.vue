@@ -53,17 +53,25 @@
                         <h4>{{seatDetail}}</h4>
                       </div>
                       <div class="col-8">
-                        <select style="width: 100%" v-model="form.parent_id[index]">             
+                        <!-- <select style="width: 100%" v-model="form.parent_id[index]">             
                           <option value="120">Child</option>
                           <option value="180">Adult</option>
                         </select>
-                      </div>
+                      </div> -->
+                      <select style="width: 100%" v-model="form.parent_id[index]">
+                        <option value="100">Child</option>
+                        <option value="200">Adult</option>
+                      </select>
+                    </div>
                     </div>
                   </h5>
                 </div>
               </div>
               <div class="total-price">
+                <h3 style="margin-top: 5%; text-align: center">{{form.parent_id}}</h3>
+                <!-- <h2 style="text-align: center"><b>{{ seatName.length*120 }}</b></h2> -->
                 <h3 style="margin-top: 5%; text-align: center">ราคารวม</h3>
+                <p>state{{state}}</p>
                 <h2 style="text-align: center"><b>{{total}}</b></h2>
               </div>
               <div class="button" style="text-align: center; margin-top: 10%">
@@ -84,17 +92,20 @@
     computed: {
       total: function () {
         let sum = 0;
-        for (let i = 0; i < this.form.parent_id.length; i++) {
+        for (let i = 0; i < this.seatName.length; i++) {
           sum += (parseInt(this.form.parent_id[i]));
+
         }
         return sum;
       }
     },
     data() {
       return {
+        length: [],
         form: {
-          parent_id: []
+          parent_id: [],
         },
+        state: [],
         seatName: [],
         movies: movies,
         categories: categories,
@@ -130,15 +141,15 @@
     display: inline-block;
     background: url(http://www.majorcineplex.com/assets/front/images/booking2/seat-4.png) no-repeat center top transparent;
     background-size: contain;
-    width: 50px;
-    height: 45px;
+    width: 4vh;
+    height: 5vh;
     padding: 0 0 0 0;
   }
 
   input[type=checkbox]:checked+label {
     background: url(http://www.majorcineplex.com/assets/front/images/booking2/seatsuccessSym.png) no-repeat center top transparent;
-    height: 45px;
-    width: 50px;
+    height: 4vh;
+    width: 5vh;
     display: inline-block;
     padding: 0 0 0 0;
   }
