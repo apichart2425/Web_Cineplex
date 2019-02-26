@@ -13,7 +13,6 @@
           <span>{{movie[0].name.th}}</span>
           <span v-html="movie[0].synopsis"></span>
           <!-- <button class="btn button-showtime btn-primary">ตัวอย่างภาพยนตร์</button> -->
-          
           <Videos/>
         </div>
       </div>
