@@ -16,20 +16,20 @@
           <!-- Nav tabs -->
           <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="pill" href="#panel1" role="tab">เงินสด</a>
+              <a class="nav-link active" data-toggle="pill" href="#cash" role="tab">เงินสด</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#panel2" role="tab">บัตรเครดิต</a>
+              <a class="nav-link" data-toggle="pill" href="#card" role="tab">บัตรเครดิต</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#panel3" role="tab">พร้อมเพย์</a>
+              <a class="nav-link" data-toggle="pill" href="#prom" role="tab">พร้อมเพย์</a>
             </li>
           </ul>
 
           <!-- Tab panels -->
           <div class="tab-content">
             <!--Panel 1-->
-            <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+            <div class="tab-pane fade in show active" id="cash" role="tabpanel">
               <!--Body-->
               <div class="modal-body mb-1">
                 <div class="md-form form-sm mb-5">
@@ -63,7 +63,7 @@
             </div>
             <!--/.Panel 1-->
             <!--Panel 2-->
-            <div class="tab-pane fade" id="panel2" role="tabpanel">
+            <div class="tab-pane fade" id="card" role="tabpanel">
               <!--Body-->
               <div class="modal-body">
                 <div class="md-form form-sm mb-5">
@@ -117,7 +117,7 @@
             </div>
             <!--/.Panel 2-->
             <!--Panel 3-->
-            <div class="tab-pane fade" id="panel3" role="tabpanel">
+            <div class="tab-pane fade" id="prom" role="tabpanel">
               <!--Body-->
               <div class="modal-body">
                 <p>รายละเอียด</p>
