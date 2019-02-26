@@ -145,20 +145,20 @@
       </div>
       <div class="col-12">
         <button
-          v-if="seatselect!=''"
-          type="button"
-          class="btn btn-outline-primary"
-          style="width: 100%; margin-top: 2%"
-        >ดำเนินการต่อ</button>
+         v-if="seatselect!=''" 
+         type="button" 
+         class="btn btn-outline-primary"
+          data-toggle="modal" data-target="#paymentForm" 
+          style="width: 100%; margin-top: 2%">ดำเนินการต่อ</button><Payment/>
       </div>
     </div>
   </div>
 </template>
 
+
 <script>
-import Theater from "@/components/Theater";
-export default {
-  components: { Theater },
+import Payment from "@/components/Payment";
+  export default {components: { Payment },
   computed: {
     total: function() {
       this.id = this.seatselect.reduce(
