@@ -1,7 +1,42 @@
 <template>
   <div class="theater">
-    <!-- <div class="container"> -->
-    <div class="row" style="margin-left: 10%; margin-right: 10%">
+    <div class="row">
+      <div class="col-lg-9">
+        <table>
+          <tbody>
+            <tr>
+              <td v-for="seat in seats1">
+                <input type="checkbox" :id="seat.num" :value="seat" v-model="seatselect">
+                <label :for="seat.num"></label>
+              </td>
+            </tr>
+            <tr>
+              <td v-for="seat2 in seats2">
+                <input type="checkbox" :id="seat2.num" :value="seat2" v-model="seatselect">
+                <label :for="seat2.num"></label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-3">
+        <div v-for="(seat_s) in seatselect">
+          <div class="row">
+            <div class="col-4">
+              {{seat_s.num}}
+            </div>
+            <div class="col-8">
+              <select v-model="seat_s.cos">
+                <option selected :value="seat_s.type[0]">Adult</option>
+                <option :value="seat_s.type[1]">Child</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <h4 style="right: 38px;position: absolute;">Total : {{sum_cost}} ฿</h4>
+      </div>
+    </div>
+    <!-- <div class="row" style="margin-left: 10%; margin-right: 10%">
       <div class="col-lg-9">
         <div class="seat">
           <table class="table-seat" style="width: 100%; position: relative;">
@@ -46,7 +81,6 @@
                       </div>
                       <div class="col-8">
                         <select style="width: 100%" v-model="form.parent_id[seatName[index]]">
-                          <!-- <select style="width: 100%" v-model="price[seatName[index]]"> -->
                           <option value="200">Child</option>
                           <option value="360">Adult</option>
                         </select>
@@ -56,10 +90,14 @@
                 </div>
               </div>
               <div class="total-price">
-                <h3 style="margin-top: 5%; text-align: center">{{form.parent_id}}</h3>
-                <!-- <h2 style="text-align: center"><b>{{ seatName }}</b></h2> -->
+                <template v-for="(value, key) in form.parent_id">
+                  {{ key }}: {{ value }}
+                  <template v-for="seat in seatName" v-if="key == seat">{{value}}</template>
+                  <template></template>
+                </template>
+                <h3 style="margin-top: 5%; text-align: center"></h3>
+
                 <h3 style="margin-top: 5%; text-align: center">ราคารวม</h3>
-                <!-- <p>state{{state}}</p> -->
                 <h2 style="text-align: center"><b>{{total}}</b></h2>
                 {{seatName}}
               </div>
@@ -70,38 +108,158 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
   export default {
     computed: {
-      total: function () {
-        let sum = 0;
-        for (let i = 0; i < this.form.parent_id; i++) {
-          // if (seatName[i] == form.parent_id) {
-          //   sum += (parseInt(Object.value(form.parent_id)[i]));
-          // }
-          // sum += (parseInt(form.parent_id.seatName.C13));
-        }
-        return sum;
+      sum_cost: function () {
+        this.num = this.seatselect.reduce(
+          (acc, item) => acc + parseInt(item.cos),
+          0
+        );
+        return this.num;
       }
+      // total: function () {
+      //   let sum = 0;
+      // if (seatName[i] == form.parent_id) {
+      //   sum += (parseInt(Object.value(form.parent_id)[i]));
+      // }
+      // sum += (parseInt(form.parent_id.seatName.C13));
+
+      //   return sum;
+      // }
     },
     data() {
       return {
-        length: [],
-        form: {
-          parent_id: {},
-        },
-        price: [],
-        seatName: [],
+        seats1: [{
+            num: "F1",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F2",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F3",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F4",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F5",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F6",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F7",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F8",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F9",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "F10",
+            type: ["180", "90"],
+            cos: "180"
+          },
+        ],
+        seats2: [{
+            num: "E1",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E2",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E3",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E4",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E5",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E6",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E7",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E8",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E9",
+            type: ["180", "90"],
+            cos: "180"
+          },
+          {
+            num: "E10",
+            type: ["180", "90"],
+            cos: "180"
+          },
+        ],
+        seatselect: [],
+        // length: [],
+        // form: {
+        //   parent_id: {},
+        // },
+        // price: [],
+        // seatName: [],
         movies: movies,
         categories: categories,
-        seat: seats,
-        selectseat: selectseat
+        // seat: seats,
+        // selectseat: selectseat
       }
-    }
+    },
+    method: {
+      greet: function (event) {
+        // `this` inside methods points to the Vue instance
+        alert('Hello ' + this.name + '!')
+        // `event` is the native DOM event
+        if (event) {
+          alert(event.target.tagName)
+        }
+      }
+    },
+
   }
 
 </script>
