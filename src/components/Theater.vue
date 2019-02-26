@@ -25,10 +25,10 @@
   import Videos from "@/components/Video"
   export default {
     name: 'theater',
-    components: {
-      Videos,
-    },
-    props: {},
+    // components: {
+    //   Videos,
+    // },
+    // props: {},
 
     data() {
       return {
