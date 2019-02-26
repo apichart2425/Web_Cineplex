@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <div class="row shadow p-3 bg-white rounded showtime-dropdown">
       <!-- Search -->
       <div class="col-md-3 mt-3">
@@ -44,7 +44,7 @@
 
     <h1 class="display-4" style="text-align: center">ภาพยนตร์</h1>
 
-    <div class>
+    <div class="container">
       <div class="card-deck">
         <div class="col-md-3" v-for="movie in searchResult">
           <router-link to="/TheaterShowTime">
@@ -65,10 +65,11 @@
 <script>
 export default {
   name: "cardmovie",
-  props: ["movies", "categories"],
   data() {
     return {
       theater: theater,
+      movies:movies,
+      categories:categories,
       searchText: "",
       select_theater: ""
     };
@@ -87,8 +88,12 @@ export default {
 </script>
 
 <style scoped>
+h4,h5{
+  color: darkslategrey;
+}
+
 .showtime-dropdown {
-  transform: translateY(-40%);
+  transform: translateY(-35%);
 }
 
 .home .showtime-dropdown {
