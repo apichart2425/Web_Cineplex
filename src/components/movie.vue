@@ -133,12 +133,12 @@
       <template v-for="(seat_s) in seatselect">
         <div class="col-4">{{seat_s.id}}</div>
         <div class="col-4">
-          <select v-model="seat_s.cos">
+          <select v-model="seat_s.price">
             <option selected :value="seat_s.type[0]">Adult</option>
             <option :value="seat_s.type[1]">Child</option>
           </select>
         </div>
-        <div class="col-4">{{seat_s.cos}}</div>
+        <div class="col-4">{{seat_s.price}}</div>
       </template>
       <div class="col-12" style="text-align: center; margin-top: 2%">
         <b>ราคารวม : {{total}} บาท</b>
@@ -162,7 +162,7 @@ import Payment from "@/components/Payment";
   computed: {
     total: function() {
       this.id = this.seatselect.reduce(
-        (acc, item) => acc + parseInt(item.cos),
+        (acc, item) => acc + parseInt(item.price),
         0
       );
       return this.id;
@@ -176,492 +176,492 @@ import Payment from "@/components/Payment";
         {
           id: "F1",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F2",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F3",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F4",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F5",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F6",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F7",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F8",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F9",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F10",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F11",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F12",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F13",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F14",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F15",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "F16",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         }
       ],
       seats2: [
         {
           id: "E1",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E2",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E3",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E4",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E5",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E6",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E7",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E8",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E9",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E10",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E11",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E12",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E13",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E14",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E15",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "E16",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         }
       ],
       seats3: [
         {
           id: "D1",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D2",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D3",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D4",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D5",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D6",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D7",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D8",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D9",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D10",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D11",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D12",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D13",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D14",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D15",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "D16",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         }
       ],
       seats4: [
         {
           id: "C1",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C2",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C3",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C4",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C5",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C6",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C7",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C8",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C9",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C10",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C11",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C12",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C13",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C14",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C15",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "C16",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         }
       ],
       seats5: [
         {
           id: "B1",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B2",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B3",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B4",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B5",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B6",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B7",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B8",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B9",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B10",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B11",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B12",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B13",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B14",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B15",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "B16",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         }
       ],
       seats6: [
         {
           id: "A1",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A2",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A3",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A4",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A5",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A6",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A7",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A8",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A9",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A10",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A11",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A12",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A13",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A14",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A15",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         },
         {
           id: "A16",
           type: ["360", "120"],
-          cos: "360"
+          price: "360"
         }
       ],
       seatselect: [],
