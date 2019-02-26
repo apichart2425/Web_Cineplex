@@ -1,12 +1,4 @@
 <template>
-  <!-- <div class="row">
-      <div class="col-9">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore alias tenetur beatae fugit
-        pariatur, delectus odit ducimus accusantium suscipit blanditiis sit cum expedita. Soluta facere ducimus possimus
-        deserunt nesciunt suscipit.</div>
-      <div class="col-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem maiores odit ipsa explicabo
-        dolorum qui? Velit, iste! Hic eum exercitationem non, ducimus esse molestias ea nobis, voluptatum doloremque
-        repellat quis.</div>
-    </div> -->
   <div class="theater">
     <!-- <div class="container"> -->
     <div class="row" style="margin-left: 10%; margin-right: 10%">
@@ -53,26 +45,24 @@
                         <h4>{{seatDetail}}</h4>
                       </div>
                       <div class="col-8">
-                        <!-- <select style="width: 100%" v-model="form.parent_id[index]">             
-                          <option value="120">Child</option>    
-                          <option value="180">Adult</option>
+
+                        <select style="width: 100%" v-model="form.parent_id[seatName[index]]">
+                          <!-- <select style="width: 100%" v-model="price[seatName[index]]"> -->
+                          <option value="200">Child</option>
+                          <option value="360">Adult</option>
                         </select>
-                      </div> -->
-                      <select style="width: 100%"  v-model="form.parent_id[index]">
-                        <option value="100">Child</option>
-                        <option value="200">Adult</option>
-                      </select>
-                    </div>
+                      </div>
                     </div>
                   </h5>
                 </div>
               </div>
               <div class="total-price">
                 <h3 style="margin-top: 5%; text-align: center">{{form.parent_id}}</h3>
-                <!-- <h2 style="text-align: center"><b>{{ seatName.length*120 }}</b></h2> -->
+                <!-- <h2 style="text-align: center"><b>{{ seatName }}</b></h2> -->
                 <h3 style="margin-top: 5%; text-align: center">ราคารวม</h3>
-                <p>state{{state}}</p>
+                <!-- <p>state{{state}}</p> -->
                 <h2 style="text-align: center"><b>{{total}}</b></h2>
+                {{seatName}}
               </div>
               <div class="button" style="text-align: center; margin-top: 10%">
                 <button type="button" class="btn btn-primary" style="width: 50%; height: 100%;">Success</button>
@@ -82,19 +72,19 @@
         </div>
       </div>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 
 <script>
-
   export default {
     computed: {
       total: function () {
         let sum = 0;
-        for (let i = 0; i < this.seatName.length; i++) {
-          sum += (parseInt(this.form.parent_id[i]));
-
+        for (let i = 0; i < this.form.parent_id; i++) {
+          // if (seatName[i] == form.parent_id) {
+          //   sum += (parseInt(Object.value(form.parent_id)[i]));
+          // }
+          // sum += (parseInt(form.parent_id.seatName.C13));
         }
         return sum;
       }
@@ -103,9 +93,9 @@
       return {
         length: [],
         form: {
-          parent_id: [],
+          parent_id: {},
         },
-        state: [],
+        price: [],
         seatName: [],
         movies: movies,
         categories: categories,
@@ -114,6 +104,7 @@
       }
     }
   }
+
 </script>
 
 <style scoped>
@@ -153,4 +144,5 @@
     display: inline-block;
     padding: 0 0 0 0;
   }
+
 </style>

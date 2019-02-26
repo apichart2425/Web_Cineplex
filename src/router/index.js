@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Movie from '@/components/movie'
 import TheaterShowTime from '@/components/TheaterShowTime'
+import PayMent from '@/components/PayMent'
+
 import {
   homedir
 } from 'os';
@@ -24,6 +26,11 @@ export default new Router({
       path: '/TheaterShowTime',
       name: 'TheaterShowTime',
       component: TheaterShowTime,
+    },
+    {
+      path: '/PayMent',
+      name: 'PayMent',
+      component: PayMent,
     },
   ]
 })
