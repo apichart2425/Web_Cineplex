@@ -77,7 +77,7 @@
         <b>ราคารวม : {{total}} บาท</b>
       </div>
       <div class="col-12">
-        <button v-if="seatselect!=''" type="button" class="btn btn-outline-primary" style="width: 100%; margin-top: 2%">ดำเนินการต่อ</button>
+        <button v-if="seatselect!=''" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#paymentForm" style="width: 100%; margin-top: 2%">ดำเนินการต่อ</button><Payment/>
       </div>
     </div>
   </div>
@@ -85,8 +85,8 @@
   </div>
 </template>
 
-<script>
-  export default {
+<script>import Payment from "@/components/Payment";
+  export default {components: { Payment },
     computed: {
       total: function () {
         this.id = this.seatselect.reduce(
