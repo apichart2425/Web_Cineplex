@@ -47,12 +47,24 @@
               <div class="select" style="text-align: center">
                 <h3>ที่นั่งที่เลือก</h3>
                 <div class="selected-seat">
-                  <h2><b>{{seatName}}</b></h2>
+                  <h5 style="text-align: left" v-for="seatDetail, index in seatName">
+                    <div class="row">
+                      <div class="col-4">
+                        <h4>{{seatDetail}}</h4>
+                      </div>
+                      <div class="col-8">
+                        <select style="width: 100%" v-model="form.parent_id[index]">             
+                          <option value="120">Child</option>
+                          <option value="180">Adult</option>
+                        </select>
+                      </div>
+                    </div>
+                  </h5>
                 </div>
               </div>
               <div class="total-price">
                 <h3 style="margin-top: 5%; text-align: center">ราคารวม</h3>
-                <h2 style="text-align: center"><b>{{ seatName.length*120 }}</b></h2>
+                <h2 style="text-align: center"><b>{{total}}</b></h2>
               </div>
               <div class="button" style="text-align: center; margin-top: 10%">
                 <button type="button" class="btn btn-primary" style="width: 50%; height: 100%;">Success</button>
@@ -69,8 +81,20 @@
 <script>
 
   export default {
+    computed: {
+      total: function () {
+        let sum = 0;
+        for (let i = 0; i < this.form.parent_id.length; i++) {
+          sum += (parseInt(this.form.parent_id[i]));
+        }
+        return sum;
+      }
+    },
     data() {
       return {
+        form: {
+          parent_id: []
+        },
         seatName: [],
         movies: movies,
         categories: categories,
@@ -78,10 +102,6 @@
         selectseat: selectseat
       }
     }
-  }
-
-  function addSeat(seat_id) {
-
   }
 </script>
 
@@ -108,17 +128,17 @@
 
   input[type=checkbox]+label {
     display: inline-block;
-    background: url(http://www.majorcineplex.com/assets/front/images/booking2/seat-2.png) no-repeat center top transparent;
+    background: url(http://www.majorcineplex.com/assets/front/images/booking2/seat-4.png) no-repeat center top transparent;
     background-size: contain;
-    width: 40px;
-    height: 35px;
+    width: 50px;
+    height: 45px;
     padding: 0 0 0 0;
   }
 
   input[type=checkbox]:checked+label {
     background: url(http://www.majorcineplex.com/assets/front/images/booking2/seatsuccessSym.png) no-repeat center top transparent;
-    height: 35px;
-    width: 40px;
+    height: 45px;
+    width: 50px;
     display: inline-block;
     padding: 0 0 0 0;
   }
