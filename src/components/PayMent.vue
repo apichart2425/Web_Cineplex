@@ -14,22 +14,24 @@
         <!--Modal cascading tabs-->
         <div class="modal-c-tabs">
           <!-- Nav tabs -->
-          <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <ul class="nav nav-tabs md-tabs tabs-3 light-blue darken-3" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="pill" href="#panel1" role="tab">เงินสด</a>
+              <a class="nav-link active" data-toggle="tab" href="#Cash" role="tab">เงินสด</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#panel2" role="tab">บัตรเครดิต</a>
+              <a class="nav-link" data-toggle="tab" href="#credit" role="tab">บัตรเครดิต</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#panel3" role="tab">พร้อมเพย์</a>
+              <a class="nav-link" data-toggle="tab" href="#promplay" role="tab">พร้อมเพย์</a>
             </li>
           </ul>
 
           <!-- Tab panels -->
           <div class="tab-content">
-            <!--Panel 1-->
-            <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+
+
+            <!--Cash-->
+            <div class="tab-pane fade in show active" id="Cash" role="tabpanel">
               <!--Body-->
               <div class="modal-body mb-1">
                 <div class="md-form form-sm mb-5">
@@ -61,12 +63,16 @@
                 >ยืนยัน</button>
               </div>
             </div>
-            <!--/.Panel 1-->
-            <!--Panel 2-->
-            <div class="tab-pane fade" id="panel2" role="tabpanel">
+            <!--/.Cash-->
+
+
+
+
+            <!--Credit -->
+            <div class="tab-pane fade" id="credit" role="tabpanel">
               <!--Body-->
               <div class="modal-body">
-                <div class="md-form form-sm mb-5">
+                <div class="md-form form-sm mb-3">
                   <i class="fas fa-envelope prefix"></i>
                   <input
                     type="text"
@@ -76,7 +82,7 @@
                   <label data-error="wrong" data-success="right" for="modalLRInput8">ชื่อผู้ถือบัตร</label>
                 </div>
 
-                <div class="md-form form-sm mb-5">
+                <div class="md-form form-sm mb-3">
                   <i class="fas fa-lock prefix"></i>
                   <input
                     type="text"
@@ -86,7 +92,7 @@
                   <label data-error="wrong" data-success="right" for="modalLRInput9">หมายเลขบัตร</label>
                 </div>
 
-                <div class="md-form form-sm mb-4">
+                <div class="md-form form-sm mb-3 ">
                   <i class="fas fa-lock prefix"></i>
                   <input
                     type="text"
@@ -96,7 +102,7 @@
                   <label data-error="wrong" data-success="right" for="modalLRInput10">ดด/ปปปป</label>
                 </div>
 
-                <div class="md-form form-sm mb-4">
+                <div class="md-form form-sm mb-3 ">
                   <i class="fas fa-lock prefix"></i>
                   <input
                     type="text"
@@ -115,9 +121,11 @@
                 >ยืนยัน</button>
               </div>
             </div>
-            <!--/.Panel 2-->
-            <!--Panel 3-->
-            <div class="tab-pane fade" id="panel3" role="tabpanel">
+            <!--/.Credit-->
+
+
+            <!--Promplay 3-->
+            <div class="tab-pane fade" id="promplay" role="tabpanel">
               <!--Body-->
               <div class="modal-body">
                 <p>รายละเอียด</p>
@@ -139,7 +147,9 @@
                 >ยืนยัน</button>
               </div>
             </div>
-            <!--/.Panel 3-->
+            <!--/.Promplay-->
+
+
           </div>
         </div>
       </div>

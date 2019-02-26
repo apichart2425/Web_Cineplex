@@ -41,14 +41,6 @@
               </div>
             </div>
             <!--Footer-->
-            <div class="modal-footer">
-              <div class="options text-center text-md-right mt-1">
-                <p>เป็นสมาชิกหรือไม่? <a href="#" class="blue-text">สมัครสมาชิก</a></p>
-                <p>ลืม <a href="#" class="blue-text">รหัสผ่าน?</a></p>
-              </div>
-              <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal">ปิด</button>
-            </div>
-
           </div>
           <!--/.Panel 1-->
 
@@ -77,13 +69,6 @@
               </div>
 
             </div>
-            <!--Footer-->
-            <div class="modal-footer">
-              <div class="options text-right">
-                <p class="pt-1">มีบัญชีผู้ใช้แล้ว? <a href="#" class="blue-text">เข้าสู่ระบบ</a></p>
-              </div>
-              <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal">ปิด</button>
-            </div>
           </div>
           <!--/.Panel 2-->
         </div>
@@ -96,3 +81,9 @@
 <!--Modal: Login / Register Form-->
 
 </template>
+
+<script>
+export default {
+  
+}
+</script>

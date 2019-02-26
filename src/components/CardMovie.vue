@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="container">
     <div class="row shadow p-3 bg-white rounded showtime-dropdown">
       <!-- Search -->
       <div class="col-md-3 mt-3">
