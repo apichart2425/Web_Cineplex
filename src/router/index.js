@@ -3,6 +3,10 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Movie from '@/components/movie'
 import TheaterShowTime from '@/components/TheaterShowTime'
+import PayMent from '@/components/PayMent'
+import Login from '@/components/Login'
+import Register from '@/components/Register'
+
 import {
   homedir
 } from 'os';
@@ -24,6 +28,21 @@ export default new Router({
       path: '/TheaterShowTime',
       name: 'TheaterShowTime',
       component: TheaterShowTime,
+    },
+    {
+      path: '/PayMent',
+      name: 'PayMent',
+      component: PayMent,
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login,
+    },
+    {
+      path: '/Register',
+      name: 'Register',
+      component: Register,
     },
   ]
 })

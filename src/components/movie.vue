@@ -55,6 +55,7 @@
           <img src="../assets/img/logotext.png" style="width:13%;">"
         </div>
       </div>
+
       <div class="col-4"><b>ที่นั่งที่เลือก</b></div>
       <div class="col-4"><b>ประเภท</b></div>
       <div class="col-4"><b>ราคา</b></div>

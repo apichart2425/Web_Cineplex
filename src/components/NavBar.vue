@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg  navbar-bg-light">
       <router-link to="/">
         <a class="navbar-left ml-5">
           <img src="../assets/img/logo.png" img style="width: 150px;">
@@ -40,28 +40,29 @@
       <div>
         <ul class="navbar-nav mr-auto">
           <li>
-            <router-link to="/">
-              <a class="nav-link" href="#">เข้าสู่ระบบ
-                <span class="sr-only">(current)</span>
-              </a>
-            </router-link>
-          </li>
-           <li>
-            <router-link to="/">
-              <a class="nav-link" href="#">สมัครสมาชิก
-                <span class="sr-only">(current)</span>
-              </a>
-            </router-link>
+            <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">เข้าสู่ระบบ/สมัครสมาชิก</a>
+            <Register/>
           </li>
         </ul>
       </div>
     </nav>
   </div>
 </template>
+
 <script>
+import Login from "@/components/Login";
+import Register from "@/components/Register";
+
+export default {
+  name: "Nav",
+  components: { Login, Register }
+};
 </script>
 
 <style scoped>
+#text_col{
+   color : black;
+}
 *{
     font-size: 4vh;
     color : black;
