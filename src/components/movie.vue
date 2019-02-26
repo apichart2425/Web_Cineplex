@@ -1,286 +1,602 @@
 <template>
   <div class="theater">
     <div class="row">
-      <div class="col-lg-9">
+      <div class="col-4" style="margin-left: 13%">
+      </div>
+      <div class="col-5" style="margin-left: 3%">
         <table>
           <tbody>
-            <tr>
+            <td colspan="20">
+              <div class="screen-image" style="margin-bottom: 20px"><img src="../assets/img/screen.svg" alt=""></div>
+            </td>
+            <tr style="text-align: right">
               <td v-for="seat in seats1">
-                <input type="checkbox" :id="seat.num" :value="seat" v-model="seatselect">
-                <label :for="seat.num"></label>
+                <input type="checkbox" :id="seat.id" :value="seat" v-model="seatselect">
+                <label :for="seat.id"></label>
               </td>
             </tr>
             <tr>
               <td v-for="seat2 in seats2">
-                <input type="checkbox" :id="seat2.num" :value="seat2" v-model="seatselect">
-                <label :for="seat2.num"></label>
+                <input type="checkbox" :id="seat2.id" :value="seat2" v-model="seatselect">
+                <label :for="seat2.id"></label>
+              </td>
+            </tr>
+            <tr>
+              <td v-for="seat3 in seats3">
+                <input type="checkbox" :id="seat3.id" :value="seat3" v-model="seatselect">
+                <label :for="seat3.id"></label>
+              </td>
+            </tr>
+            <tr>
+              <td v-for="seat4 in seats4">
+                <input type="checkbox" :id="seat4.id" :value="seat4" v-model="seatselect">
+                <label :for="seat4.id"></label>
+              </td>
+            </tr>
+            <tr>
+              <td v-for="seat5 in seats5">
+                <input type="checkbox" :id="seat5.id" :value="seat5" v-model="seatselect">
+                <label :for="seat5.id"></label>
+              </td>
+            </tr>
+            <tr>
+              <td v-for="seat6 in seats6">
+                <input type="checkbox" :id="seat6.id" :value="seat6" v-model="seatselect">
+                <label :for="seat6.id"></label>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="col-lg-3">
-        <div v-for="(seat_s) in seatselect">
-          <div class="row">
-            <div class="col-4">
-              {{seat_s.num}}
-            </div>
-            <div class="col-8">
-              <select v-model="seat_s.cos">
-                <option selected :value="seat_s.type[0]">Adult</option>
-                <option :value="seat_s.type[1]">Child</option>
-              </select>
-            </div>
-          </div>
+    </div>
+    <div class="row" style="margin-left: 20%;margin-right: 20%; background-color: rgb(200, 225, 233); padding: 1%; border-radius: 20px;margin-top: 2%;">
+      <div class="col-12">
+        <div class="logo" style="margin-bottom: 2%;">
+          <img src="../assets/img/logotext.png" style="width:13%;">"
         </div>
-        <h4 style="right: 38px;position: absolute;">Total : {{sum_cost}} ฿</h4>
+      </div>
+      <div class="col-4"><b>ที่นั่งที่เลือก</b></div>
+      <div class="col-4"><b>ประเภท</b></div>
+      <div class="col-4"><b>ราคา</b></div>
+      <template v-for="(seat_s) in seatselect">
+        <div class="col-4">
+          {{seat_s.id}}
+        </div>
+        <div class="col-4">
+          <select v-model="seat_s.cos">
+            <option selected :value="seat_s.type[0]">Adult</option>
+            <option :value="seat_s.type[1]">Child</option>
+          </select>
+        </div>
+        <div class="col-4">
+          {{seat_s.cos}}
+        </div>
+      </template>
+      <div class="col-12" style="text-align: center; margin-top: 2%">
+        <b>ราคารวม : {{total}} บาท</b>
+      </div>
+      <div class="col-12">
+        <button v-if="seatselect!=''" type="button" class="btn btn-outline-primary" style="width: 100%; margin-top: 2%">ดำเนินการต่อ</button>
       </div>
     </div>
-    <!-- <div class="row" style="margin-left: 10%; margin-right: 10%">
-      <div class="col-lg-9">
-        <div class="seat">
-          <table class="table-seat" style="width: 100%; position: relative;">
-            <tbody>
-              <td style="height: 30px; width: 60px;"></td>
-              <td colspan="20">
-                <div class="screen-image" style="margin-bottom: 20px"><img src="../assets/img/screen.svg" alt=""></div>
-              </td>
-              </tr>
-              <tr v-for="chair in seat">
-                <td style="text-align: center; padding: 0 0 0 0;">{{chair.id}}</td>
-                <td style="height: 30px; width: 30px;"></td>
-                <td v-for="chair_no in chair.seat_no" :class="chair_no" style="margin-bottom: 0; padding: 6px 0 0 0;">
-                  <input type="checkbox" :id="chair_no" :value="chair_no" v-model="seatName">
-                  <label :for="chair_no"></label>
-                </td>
-                <td style="height: 30px; width: 60px;"></td>
-                <td style="text-align: center; padding: 0 0 0 0;">{{chair.id}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="book-seat">
-          <div class="logo">
-            <img src="../assets/img/logotext.png" alt="" style="width: 100%">
-          </div>
-          <div class="movie-detail">
-            <h3 class="movie-name"><b>{{movies[0].name.en}}</b></h3>
-            <h5 style="padding-top: 2%">&nbsp;&nbsp;&nbsp;<b>6 March 2019</b></h5>
-          </div>
-          <div class="summary">
-            <div class="price">
-              <div class="select" style="text-align: center">
-                <h3>ที่นั่งที่เลือก</h3>
-                <div class="selected-seat">
-                  <h5 style="text-align: left" v-for="seatDetail, index in seatName">
-                    <div class="row">
-                      <div class="col-4">
-                        <h4>{{seatDetail}}</h4>
-                      </div>
-                      <div class="col-8">
-                        <select style="width: 100%" v-model="form.parent_id[seatName[index]]">
-                          <option value="200">Child</option>
-                          <option value="360">Adult</option>
-                        </select>
-                      </div>
-                    </div>
-                  </h5>
-                </div>
-              </div>
-              <div class="total-price">
-                <template v-for="(value, key) in form.parent_id">
-                  {{ key }}: {{ value }}
-                  <template v-for="seat in seatName" v-if="key == seat">{{value}}</template>
-                  <template></template>
-                </template>
-                <h3 style="margin-top: 5%; text-align: center"></h3>
-
-                <h3 style="margin-top: 5%; text-align: center">ราคารวม</h3>
-                <h2 style="text-align: center"><b>{{total}}</b></h2>
-                {{seatName}}
-              </div>
-              <div class="button" style="text-align: center; margin-top: 10%">
-                <button type="button" class="btn btn-primary" style="width: 50%; height: 100%;">Success</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  </div>
+  </div>
   </div>
 </template>
 
 <script>
   export default {
     computed: {
-      sum_cost: function () {
-        this.num = this.seatselect.reduce(
+      total: function () {
+        this.id = this.seatselect.reduce(
           (acc, item) => acc + parseInt(item.cos),
           0
         );
-        return this.num;
+        return this.id;
       }
-      // total: function () {
-      //   let sum = 0;
-      // if (seatName[i] == form.parent_id) {
-      //   sum += (parseInt(Object.value(form.parent_id)[i]));
-      // }
-      // sum += (parseInt(form.parent_id.seatName.C13));
-
-      //   return sum;
-      // }
     },
     data() {
       return {
         seats1: [{
-            num: "F1",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F1",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F2",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F2",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F3",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F3",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F4",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F4",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F5",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F5",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F6",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F6",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F7",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F7",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F8",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F8",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F9",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F9",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "F10",
-            type: ["180", "90"],
-            cos: "180"
+            id: "F10",
+            type: ["360", "120"],
+            cos: "360"
           },
+          {
+            id: "F11",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "F12",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "F13",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "F14",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "F15",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "F16",
+            type: ["360", "120"],
+            cos: "360"
+          },
+
         ],
         seats2: [{
-            num: "E1",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E1",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E2",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E2",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E3",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E3",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E4",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E4",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E5",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E5",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E6",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E6",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E7",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E7",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E8",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E8",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E9",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E9",
+            type: ["360", "120"],
+            cos: "360"
           },
           {
-            num: "E10",
-            type: ["180", "90"],
-            cos: "180"
+            id: "E10",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "E11",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "E12",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "E13",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "E14",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "E15",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "E16",
+            type: ["360", "120"],
+            cos: "360"
+          },
+        ],
+        seats3: [{
+            id: "D1",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D2",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D3",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D4",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D5",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D6",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D7",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D8",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D9",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D10",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D11",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D12",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D13",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D14",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D15",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "D16",
+            type: ["360", "120"],
+            cos: "360"
+          },
+        ],
+        seats4: [{
+            id: "C1",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C2",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C3",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C4",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C5",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C6",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C7",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C8",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C9",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C10",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C11",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C12",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C13",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C14",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C15",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "C16",
+            type: ["360", "120"],
+            cos: "360"
+          },
+
+        ],
+        seats5: [{
+            id: "B1",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B2",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B3",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B4",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B5",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B6",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B7",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B8",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B9",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B10",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B11",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B12",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B13",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B14",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B15",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "B16",
+            type: ["360", "120"],
+            cos: "360"
+          },
+        ],
+        seats6: [{
+            id: "A1",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A2",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A3",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A4",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A5",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A6",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A7",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A8",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A9",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A10",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A11",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A12",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A13",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A14",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A15",
+            type: ["360", "120"],
+            cos: "360"
+          },
+          {
+            id: "A16",
+            type: ["360", "120"],
+            cos: "360"
           },
         ],
         seatselect: [],
-        // length: [],
-        // form: {
-        //   parent_id: {},
-        // },
-        // price: [],
-        // seatName: [],
         movies: movies,
         categories: categories,
-        // seat: seats,
-        // selectseat: selectseat
       }
     },
-    method: {
-      greet: function (event) {
-        // `this` inside methods points to the Vue instance
-        alert('Hello ' + this.name + '!')
-        // `event` is the native DOM event
-        if (event) {
-          alert(event.target.tagName)
-        }
-      }
-    },
+    method: {},
 
   }
 
 </script>
 
 <style scoped>
-  .summary {
-    margin-top: 20%;
-    background-color: #fff;
-    padding: 20px;
-  }
-
-  .book-seat {
-    background-color: #f5f7fb;
-    padding: 30px;
-    text-align: left
-  }
-
-  .movie-name {
-    margin-top: 40px;
-  }
-
   input[type=checkbox] {
     display: none;
   }
@@ -296,8 +612,8 @@
 
   input[type=checkbox]:checked+label {
     background: url(http://www.majorcineplex.com/assets/front/images/booking2/seatsuccessSym.png) no-repeat center top transparent;
-    height: 4vh;
-    width: 5vh;
+    width: 4vh;
+    height: 5vh;
     display: inline-block;
     padding: 0 0 0 0;
   }
