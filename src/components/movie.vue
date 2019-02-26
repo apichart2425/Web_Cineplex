@@ -3,7 +3,10 @@
     <div class="row">
       <div class="col-4" style="margin-left: 13%">
       </div>
-      <div class="col-5" style="margin-left: 3%">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" style="margin-left: 3%">
         <table>
           <tbody>
             <td colspan="20">
