@@ -4,6 +4,8 @@ import Home from '@/components/Home'
 import Movie from '@/components/movie'
 import TheaterShowTime from '@/components/TheaterShowTime'
 import PayMent from '@/components/PayMent'
+import Login from '@/components/Login'
+import Register from '@/components/Register'
 
 import {
   homedir
@@ -31,6 +33,16 @@ export default new Router({
       path: '/PayMent',
       name: 'PayMent',
       component: PayMent,
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login,
+    },
+    {
+      path: '/Register',
+      name: 'Register',
+      component: Register,
     },
   ]
 })

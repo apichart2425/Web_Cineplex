@@ -168,4 +168,3 @@ seats =[
     },
 ]
 
-selectseat=[]

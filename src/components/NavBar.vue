@@ -22,7 +22,8 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <router-link to="/">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="#">
+                Home
                 <span class="sr-only">(current)</span>
               </a>
             </router-link>
@@ -54,11 +55,30 @@
           </router-link>
         </ul>
       </div>
+      <div>
+        <ul class="navbar-nav mr-auto">
+          <li>
+            <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">LogIn/Register</a>
+            <Register/>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </template>
+
 <script>
+import Login from "@/components/Login";
+import Register from "@/components/Register";
+
+export default {
+  name: "Nav",
+  components: { Login, Register }
+};
 </script>
 
 <style scoped>
+.btn-bg {
+  background-color: white;
+}
 </style>
