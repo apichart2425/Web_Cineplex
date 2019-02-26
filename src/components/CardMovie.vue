@@ -4,8 +4,11 @@
       <!-- Search -->
       <div class="col-md-3 mt-3">
         <div class>
-          <select v-model="selected" class="input-group size_select">
-            <option v-for="categorie in categories" value="categorie.id">{{categorie.name}}</option>
+          <select v-model="searchCategorie" @change="onchange()" class="input-group size_select">
+            <optgroup label="Categorie">
+              <option value="All">All</option>
+              <option v-for="categorie in categories" :value="categorie.id">{{categorie.name}}</option>
+            </optgroup>
           </select>
           <br>
         </div>
@@ -14,8 +17,11 @@
       <!-- โรงภาพยนตร์ -->
       <div class="col-md-3 mt-3">
         <div class="input-group">
-          <select v-model="selected" class="input-group size_select">
-            <option v-for="theater in theater" value="categorie.id">{{theater.name}}</option>
+          <select  class="input-group size_select">
+            <optgroup label="Theater">
+              <option disabled selected value="">โรงภาพยนตร์</option>
+              <option v-for="theater in theater" value="categorie.id">{{theater.name}}</option>
+            </optgroup>
           </select>
           <br>
         </div>
@@ -29,14 +35,8 @@
       <!--  movie -->
       <div class="col-md-4 mt-2">
         <div class="input-group">
-          <input
-            v-model="searchText"
-            type="text"
-            class="form-control"
-            placeholder="Search post"
-            aria-label="search"
-            aria-describedby="basic-addon1"
-          >
+          <input v-model="searchText" type="text" class="form-control" placeholder="Search post" aria-label="search"
+            aria-describedby="basic-addon1">
           <div class="input-group-prepend"></div>
         </div>
       </div>
@@ -46,7 +46,7 @@
 
     <div class>
       <div class="card-deck">
-        <div class="col-md-3" v-for="movie in searchResult">
+        <div class="col-md-3" v-for="movie in searchResult" v-show="movie.check">
           <router-link to="/TheaterShowTime">
             <div class="card my-2">
               <img :src="movie.poster" class="card-img-top mx-auto">
@@ -63,58 +63,76 @@
 </template>
 
 <script>
-export default {
-  name: "cardmovie",
-  props: ["movies", "categories"],
-  data() {
-    return {
-      theater: theater,
-      searchText: "",
-      select_theater: ""
-    };
-  },
-  computed: {
-    searchResult() {
-      return this.movies.filter(movie => {
-        let searchText = this.searchText.toLowerCase();
-        let isMatchTitleEn = movie.name.en.toLowerCase().includes(searchText);
-        let isMatchTitleTh = movie.name.th.toLowerCase().includes(searchText);
-        return isMatchTitleEn | isMatchTitleTh;
-      });
+  export default {
+    name: "cardmovie",
+    props: ["movies", "categories"],
+    data() {
+      return {
+        theater: theater,
+        searchCategorie: "All",
+        searchText: "",
+        select_theater: ""
+      };
+    },
+    computed: {
+      searchResult() {
+        return this.movies.filter(movie => {
+          let searchText = this.searchText.toLowerCase();
+          let isMatchTitleEn = movie.name.en.toLowerCase().includes(searchText);
+          let isMatchTitleTh = movie.name.th.toLowerCase().includes(searchText);
+          return isMatchTitleEn | isMatchTitleTh;
+        });
+      }
+    },
+    methods: {
+      onchange: function () {
+        for (var i = 0; i < this.movies.length; i++) {
+          if (this.searchCategorie == 'All') {
+            this.movies[i].check = true
+          } else {
+            if (this.movies[i].categories.includes(this.searchCategorie)) {
+              this.movies[i].check = true
+            } else {
+              this.movies[i].check = false
+            }
+          }
+        }
+      }
     }
-  }
-};
+  };
+
 </script>
 
 <style scoped>
-.showtime-dropdown {
-  transform: translateY(-40%);
-}
+  .showtime-dropdown {
+    transform: translateY(-40%);
+  }
 
-.home .showtime-dropdown {
-  width: 80%;
-  padding: 50px;
-  background-origin: padding-box;
-}
+  .home .showtime-dropdown {
+    width: 80%;
+    padding: 50px;
+    background-origin: padding-box;
+  }
 
-.size_select {
-  height: 5vh;
-  text-align: center;
-}
+  .size_select {
+    height: 5vh;
+    text-align: center;
+  }
 
-.card-body {
-  padding: 0px;
-}
+  .card-body {
+    padding: 0px;
+  }
 
-.size_card {
-  height: 60vh;
-  width: 40vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+  .size_card {
+    height: 60vh;
+    width: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
-.ma-top {
-  margin-top: 10px;
-}
+  .ma-top {
+    margin-top: 10px;
+  }
+
 </style>
