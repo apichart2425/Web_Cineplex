@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-        <Navbar/>
+      <Navbar/>
     </div>
     <!-- <router-link to='/home'>home</router-link> -->
     <!-- <MyCarousel :movies="movies"/> -->
@@ -10,13 +10,11 @@
 </template>
 
 <script>
-
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/Navbar";
 export default {
-  name: 'App',
-  components: {Navbar},
-}
-
+  name: "App",
+  components: { Navbar }
+};
 </script>
 
 <style>
@@ -27,5 +25,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
+  
 }
+
 </style>
