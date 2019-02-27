@@ -5,16 +5,16 @@
       <div class="card mb-3">
         <div class="row no-gutters">
           <div class="col-md-2">
-            <h4 class="mt-5" style="text-align:center;">{{theaters.theater.id}}</h4>
+            <h4 class="mt-5" style="text-align:center;">{{theaters.theater_num.id}}</h4>
             <!-- <div class="size_carousel" :style="{'background-image':'url('+movies[5].poster+')', }"></div> -->
             <!-- <img src="../assets/img/logo.png" class="size_carousel card-img" alt="..."> -->
           </div>
           <div class="col-md-10 showtime-box">
             <div class="card-body">
               <!-- <h5 class="card-title"></h5> -->
-              <p class="card-text">TH|EN</p>
+              <p class="card-text"><img src="../assets/img/Speake.png" alt="" style="height:5vh;weight:5vh;"> TH|EN</p>
               <p class="card-text">
-                <small class="text-muted">ความยาวหนัง : 120 min</small>
+                <small class="text-muted"><img src="../assets/img/clock.png" alt="" style="height:5vh;weight:5vh;"> : 120 min</small>
               </p>
             </div>
             <ul class="time-list nav">

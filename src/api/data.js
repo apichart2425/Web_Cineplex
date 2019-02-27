@@ -86,7 +86,7 @@ movies = [
     { 
         check: true,
         id: 7, 
-        name: { en:"Spider-Man: Far From Home", th: " " }, 
+        name: { en:"Spider-Man: Far From Home", th: "สไปดี้ ไปไกลบ้าน" }, 
         poster: "https://lh3.googleusercontent.com/aZyGy5YQR9MOlwDAv16ausRi1McYoLmY3Wrfrpbs19_yRJwDRrpNLD8leObOvS-22X4ogYRBXprZC1qyVmOH2g=w260", 
         wallpaper: "https://lh3.googleusercontent.com/YbEPW8ZBPY-CYUhsrCW99MQplbb2HL5Jh2g-RfvzGBIdgft3FYWxIj5-GSwp-FfU2IXFGzufIzLLFh3tN0k3Bg=w1920",      
         director: "Jon Watts", 
@@ -97,7 +97,7 @@ movies = [
     { 
         check: true,
         id: 8, 
-        name: { en:"", th: "สวนสนุกสุดอัศจรรย์" }, 
+        name: { en:"WONDER PARK", th: "สวนสนุกสุดอัศจรรย์" }, 
         poster: "https://lh3.googleusercontent.com/48a3OvgNnmQi4W8lbciaJqbHTYj3EuV-g0AewvC3HB69qKfMrnpPY9sC86tqlFpanYtZhyqqZPl4h_KBH1dJ=w260", 
         wallpaper: "https://lh3.googleusercontent.com/lgtt8tU6YywkRmFmHnNlp0ykucK-98b-p0WeMOz6ZMi5zFQbdxpkWRs1gUlI-Egi__st_WdLuNxz6_o6NEsd=w1920" ,
         director: "Josh Appelbaum, André Nemec", 
@@ -108,7 +108,7 @@ movies = [
     { 
         check: true,
         id: 9, 
-        name: { en:" ", th: "รวมพลังมาสค์ไรเดอร์" }, 
+        name: { en:"Masrider FOREVER", th: "รวมพลังมาสค์ไรเดอร์" }, 
         poster: "https://lh3.googleusercontent.com/kCfNRZJsGthwaWGbJ6OslaBwglGChbl7SwmQdygJ0-rZ9mKjnESVyn-18p0RlLRZh7vHKx1pqqxvjW07YBp-=w260", 
         wallpaper: "https://lh3.googleusercontent.com/S8cJvgDJR2MTX1ucIPJDCL2c5aNb9_kV40rV26MWG0tGaEw84PtT21V9eMv7Jvo4WjfD8U-sWEypYRT1sLN0Tw=w1920" ,
         director: "Kyohei Yamaguchi", 
@@ -130,7 +130,7 @@ movies = [
     { 
         check: true,
         id: 11, 
-        name: { en:"John Wick: Chapter 3", th: " " }, 
+        name: { en:"John Wick: Chapter 3", th: "จอห์นวิค ภาค 3" }, 
         poster: "https://lh3.googleusercontent.com/ZAiQ1CmS7lheM8VXV5qNtpldyfHgp2FiKX7NucQqSvDbWVya63cW0KyEgZ7aL_3CTefm2W-I_01g5I8ptoFpzg=w260", 
         wallpaper: "http://hdqwalls.com/wallpapers/john-wick-3-parabellum-movie-2019-8k-08.jpg" ,
         director: "Chad Stahelski", 

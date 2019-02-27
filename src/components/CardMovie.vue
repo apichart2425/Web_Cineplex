@@ -28,7 +28,7 @@
       </div>
       <div class="col-md-2 mt-2">
         <router-link to="/TheaterShowTime">
-          <button class="btn btn-primary" v-model="select_theater">รอบฉาย</button>
+          <button class="btn btn-primary" v-model="select_theater" style="font-size:3vh;">รอบฉาย</button>
         </router-link>
       </div>
 

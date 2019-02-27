@@ -16,22 +16,23 @@
           <!-- Nav tabs -->
           <ul class="nav nav-tabs md-tabs tabs-3 light-blue darken-3" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#Cash" role="tab">เงินสด</a>
+
+
+              <a class="nav-link active" data-toggle="pill" href="#cash" role="tab">เงินสด</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#credit" role="tab">บัตรเครดิต</a>
+              <a class="nav-link" data-toggle="pill" href="#card" role="tab">บัตรเครดิต</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#promplay" role="tab">พร้อมเพย์</a>
+              <a class="nav-link" data-toggle="pill" href="#prom" role="tab">พร้อมเพย์</a>
             </li>
           </ul>
 
           <!-- Tab panels -->
           <div class="tab-content">
 
-
-            <!--Cash-->
-            <div class="tab-pane fade in show active" id="Cash" role="tabpanel">
+            <!--Panel 1-->
+            <div class="tab-pane fade in show active" id="cash" role="tabpanel">
               <!--Body-->
               <div class="modal-body mb-1">
                 <div class="md-form form-sm mb-5">
@@ -44,7 +45,7 @@
                   >
                 </div>
 
-                <div class="md-form form-sm mb-4">
+                <div class="md-form form-sm mb-5">
                   <i class="fas fa-lock prefix"></i>
                   <label data-error="wrong" data-success="right" for="modalLRInput7">ชื่อ-นามสกุล</label>
                   <input
@@ -56,20 +57,19 @@
               </div>
               <!--Footer-->
               <div class="modal-footer">
+                <router-link to="/Ticket">
                 <button
                   type="button"
                   class="btn btn-outline-info waves-effect ml-auto"
                   data-dismiss="modal"
-                >ยืนยัน</button>
+                >ยืนยัน </button>
+                </router-link>
               </div>
             </div>
-            <!--/.Cash-->
 
-
-
-
-            <!--Credit -->
-            <div class="tab-pane fade" id="credit" role="tabpanel">
+            <!--/.Panel 1-->
+            <!--Panel 2-->
+            <div class="tab-pane fade" id="card" role="tabpanel">
               <!--Body-->
               <div class="modal-body">
                 <div class="md-form form-sm mb-3">
@@ -99,7 +99,7 @@
                     id="modalLRInput10"
                     class="form-control form-control-sm validate"
                   >
-                  <label data-error="wrong" data-success="right" for="modalLRInput10">ดด/ปปปป</label>
+                  <label data-error="wrong" data-success="right" for="modalLRInput10">MOUNTH/YEAR</label>
                 </div>
 
                 <div class="md-form form-sm mb-3 ">
@@ -114,18 +114,18 @@
               </div>
               <!--Footer-->
               <div class="modal-footer">
+                <router-link to="/Ticket">
                 <button
                   type="button"
                   class="btn btn-outline-info waves-effect ml-auto"
                   data-dismiss="modal"
-                >ยืนยัน</button>
+                >ยืนยัน </button>
+                </router-link>
               </div>
             </div>
-            <!--/.Credit-->
-
-
-            <!--Promplay 3-->
-            <div class="tab-pane fade" id="promplay" role="tabpanel">
+            <!--/.Panel 2-->
+            <!--Panel 3-->
+            <div class="tab-pane fade" id="prom" role="tabpanel">
               <!--Body-->
               <div class="modal-body">
                 <p>รายละเอียด</p>
@@ -140,11 +140,13 @@
               </div>
               <!--Footer-->
               <div class="modal-footer">
+                <router-link to="/Ticket">
                 <button
                   type="button"
                   class="btn btn-outline-info waves-effect ml-auto"
                   data-dismiss="modal"
                 >ยืนยัน</button>
+                </router-link>
               </div>
             </div>
             <!--/.Promplay-->
@@ -171,6 +173,14 @@
 </style>
 
 <script>
+import Ticket from "@/components/Ticket"
+
+export default{
+  name:"Payment",
+  components:{
+    Ticket,
+  }
+}
 </script>
 
 

@@ -43,31 +43,31 @@ name_theater = [
 theater = [{
   id: 1,
   name: "เอ็มพรีเว่ ซีเนคลับ เอ็มโพเรียม",
-  theater: { id: "Theater A" },
+  theater_num: { id: "Theater A" },
   times: [1, 2, 3],
 },
 {
   id: 2,
   name: "เอ็มพรีเว่ ซีเนคลับ 2",
-  theater: { id: "Theater B" },
+  theater_num: { id: "Theater B" },
   times: [3],
 },
 {
   id: 3,
   name: "เอ็มพรีเว่ ซีเนคลับ 3",
-  theater: { id: "Theater B" },
+  theater_num: { id: "Theater B" },
   times: [1, 3, 4],
 },
 {
   id: 4,
   name: "เอ็มพรีเว่ ซีเนคลับ 4",
-  theater: { id: "Theater B" },
+  theater_num: { id: "Theater B" },
   times: [1, 2],
 },
 {
   id: 5,
   name: "เอ็มพรีเว่ ซีเนคลับ 5",
-  theater: { id: "Theater B" },
+  theater_num: { id: "Theater B" },
   times: [1, 4],
 },
 

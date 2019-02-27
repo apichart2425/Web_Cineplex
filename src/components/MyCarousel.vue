@@ -26,7 +26,7 @@
                     </label>
                   </h3>
                   <router-link to="/TheaterShowTime">
-                    <a class="btn btn-primary btn-lg" style="color:black;" :title="movie.name.th">รายละเอียดหนัง</a>
+                    <a class="btn btn-primary btn-lg" style="color:white;" :title="movie.name.th">รายละเอียดหนัง</a>
                   </router-link>
                 </div>
               </div>
