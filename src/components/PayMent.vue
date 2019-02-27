@@ -39,7 +39,9 @@
                     type="email"
                     id="modalLRInput6"
                     class="form-control form-control-sm validate"
+                    v-model="email"
                   >
+                  <a style="color: red">{{errorEmail}}</a>
                 </div>
 
                 <div class="md-form form-sm mb-4">
@@ -49,7 +51,9 @@
                     type="text"
                     id="modalLRInput7"
                     class="form-control form-control-sm validate"
+                    v-model="name1"
                   >
+                  <a style="color: red">{{errorName1}}</a>
                 </div>
               </div>
               <!--Footer-->
@@ -57,7 +61,7 @@
                 <button
                   type="button"
                   class="btn btn-outline-info waves-effect ml-auto"
-                  data-dismiss="modal"
+                  @click="checkFormCash"
                 >ยืนยัน</button>
               </div>
             </div>
@@ -72,8 +76,10 @@
                     type="text"
                     id="modalLRInput8"
                     class="form-control form-control-sm validate"
+                    v-model="name2"
                   >
                   <label data-error="wrong" data-success="right" for="modalLRInput8">ชื่อผู้ถือบัตร</label>
+                  <a style="color: red">{{errorName2}}</a>
                 </div>
 
                 <div class="md-form form-sm mb-5">
@@ -82,8 +88,10 @@
                     type="text"
                     id="modalLRInput9"
                     class="form-control form-control-sm validate"
+                    v-model="cardnum"
                   >
                   <label data-error="wrong" data-success="right" for="modalLRInput9">หมายเลขบัตร</label>
+                  <a style="color: red">{{errorCardnum}}</a>
                 </div>
 
                 <div class="md-form form-sm mb-4">
@@ -92,8 +100,10 @@
                     type="text"
                     id="modalLRInput10"
                     class="form-control form-control-sm validate"
+                    v-model="enddate"
                   >
                   <label data-error="wrong" data-success="right" for="modalLRInput10">ดด/ปปปป</label>
+                  <a style="color: red">{{errorEnddate}}</a>
                 </div>
 
                 <div class="md-form form-sm mb-4">
@@ -102,8 +112,10 @@
                     type="text"
                     id="modalLRInput11"
                     class="form-control form-control-sm validate"
+                    v-model="cvv"
                   >
                   <label data-error="wrong" data-success="right" for="modalLRInput11">CVV</label>
+                  <a style="color: red">{{errorCvv}}</a>
                 </div>
               </div>
               <!--Footer-->
@@ -111,7 +123,7 @@
                 <button
                   type="button"
                   class="btn btn-outline-info waves-effect ml-auto"
-                  data-dismiss="modal"
+                  @click="checkFormCard"
                 >ยืนยัน</button>
               </div>
             </div>
@@ -136,7 +148,7 @@
                   type="button"
                   class="btn btn-outline-info waves-effect ml-auto"
                   data-dismiss="modal"
-                >ยืนยัน</button>
+                >ปิด</button>
               </div>
             </div>
             <!--/.Panel 3-->
@@ -161,6 +173,72 @@
 </style>
 
 <script>
+export default {
+      name: "payment",
+      data() {
+        return {
+          email:"",
+          name1:"",
+          name2:"",
+          cardnum:"",
+          enddate:"",
+          cvv:"",
+          errorText:"",
+          errorName1:"",
+          errorEmail:"",
+          errorName2:"",
+          errorCardnum:"",
+          errorEnddate:"",
+          errorCvv:"",
+        };
+      },
+      methods: {
+        checkFormCash: function () {
+          if(this.email == ""){
+            this.errorEmail = "Please insert email";
+          }else{
+            this.errorEmail = "";
+          }
+          if(this.name1 == ""){
+            this.errorName1 = "Please insert name";
+          }
+          else{
+            this.errorName1 = "";
+          }
+          if(this.email != "" && this.name1 != ""){
+            $('#paymentForm').modal('hide');
+          }
+        },
+        checkFormCard: function () {
+          if(this.name2 == ""){
+            this.errorName2 = "โปรดกรอกข้อมูลให้ครบถ้วน";
+          }else{
+            this.errorName2 = "";
+          }
+          if(this.cardnum == ""){
+            this.errorCardnum = "Please insert card";
+          }
+          else{
+            this.errorCardnum = "";
+          }
+          if(this.enddate == ""){
+            this.errorEnddate = "Please insert date";
+          }
+          else{
+            this.errorEnddate = "";
+          }
+          if(this.cvv == ""){
+            this.errorCvv = "Please insert cvv";
+          }
+          else{
+            this.errorCvv = "";
+          }
+          if(this.name2 != "" && this.cardnum != "" && this.enddate != "" && this.cvv != ""){
+            $('#paymentForm').modal('hide');
+          }
+        },
+      }
+    };
 </script>
 
 
