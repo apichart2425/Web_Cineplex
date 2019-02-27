@@ -83,7 +83,7 @@
                   <input
                     type="email"
                     id="modalLRInput3"
-                    v-model="email"
+                    v-model="email2"
                     class="form-control"
                     required
                   >
@@ -95,7 +95,7 @@
                   <input
                     type="password"
                     id="modalLRInput4"
-                    v-model="password"
+                    v-model="password2"
                     class="form-control"
                     required
                   >
@@ -143,6 +143,8 @@ export default {
   data() {
     return {
       email: "",
+      email2:"",
+      password2:"",
       password: "",
       repass: "",
       errorEmail: "",
@@ -167,12 +169,12 @@ export default {
       }
     },
     checkFormRegister: function() {
-      if (this.email == "") {
+      if (this.email2 == "") {
         this.errorEmail = "Please insert email";
       } else {
         this.errorEmail = "";
       }
-      if (this.password == "") {
+      if (this.password2 == "") {
         this.errorPassword = "Please insert password";
       } else {
         this.errorPassword = "";
@@ -180,11 +182,12 @@ export default {
       if (this.repass == "") {
         this.errorRepass = "Please insert password";
       } else if (this.repass != this.password) {
-        this.errorRepass = "Please insert password";
+        alert("Password dont match")
+        this.errorRepass = "";
       } else {
         this.errorRepass = "";
       }
-      if (this.email != "" && this.password != "" && this.repass != "" && this.repass === this.password) {
+      if (this.email2 != "" && this.password2 != "" && this.repass != "" && this.repass === this.password2) {
         $("#modalLRForm").modal("hide");
       }
     }
