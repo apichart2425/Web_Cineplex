@@ -9,14 +9,13 @@
       <br>
       <span class="card-text">SEAT : E12</span>
       <span class="card-text">TIME : 17:00, DATE: 17/9/2202</span>
-      <span>{{name}}</span>
+      <h4 class="t_red">** กรุณาชำระเงินที่หน้าจุดบริการ **</h4>
     </div>
-    <img src="../assets/img/qr.png" class="card-img-top size_barcode ml-5 my-3" alt="...">
+    <img src="../assets/img/barcode.png" class="card-img-top size_barcode ml-5 my-3" alt="...">
   </div>
 </template>
 <script>
 export default {
-  props:["name"],
   data() {
     return {
       movies: movies,
@@ -39,15 +38,17 @@ export default {
   min-width: 1vh;
 }
 .size_img_card {
-  background-position: left;
   width: 30vh;
   height: 20vh;
 }
 .size_barcode {
   width: 30vh;
-  height: 30vh;
+  height: 10vh;
 }
 .card-body {
   padding: 0;
+}
+.t_red{
+    color: red;
 }
 </style>

@@ -11,7 +11,7 @@
       <span class="card-text">TIME : 17:00, DATE: 17/9/2202</span>
       <span>{{name}}</span>
     </div>
-    <img src="../assets/img/qr.png" class="card-img-top size_barcode ml-5 my-3" alt="...">
+    <img src="../assets/img/Paypal.png" class="card-img-top size_barcode ml-5 my-3" alt="...">
   </div>
 </template>
 <script>
@@ -45,7 +45,7 @@ export default {
 }
 .size_barcode {
   width: 30vh;
-  height: 30vh;
+  height: 10vh;
 }
 .card-body {
   padding: 0;

@@ -9,6 +9,9 @@ import Register from '@/components/Register'
 import DetailMovie from '@/components/DetailMovie'
 import CardMovie from '@/components/CardMovie'
 import Ticket from "@/components/Ticket"
+import CashTicket from "@/components/CashTicket"
+import PPTicket from "@/components/PPTicket"
+
 
 import {
   homedir
@@ -61,6 +64,16 @@ export default new Router({
       path: '/Ticket',
       name: 'Ticket',
       component: Ticket,
+    },
+    {
+      path: '/CashTicket',
+      name: 'CashTicket',
+      component: CashTicket,
+    },
+    {
+      path: '/PPTicket',
+      name: 'PPTicket',
+      component: PPTicket,
     },
   ]
 })

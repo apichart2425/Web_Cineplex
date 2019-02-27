@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6 btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary text-position" v-for="dates in dates">
+        <button type="button" class="btn btn-primary text-position " v-for="dates in dates">
           <span>{{dates.name}}</span><br>
-          <span style="font-size: 2.5vh;">{{dates.day}}</span>
+          <span  style="font-size: 2.5vh;">{{dates.day}}</span>
         </button>
       </div>
       <div class="col-md-3"></div>
@@ -44,6 +44,13 @@ export default {
 * {
   text-align: left;
   font-size: 4vh;
+}
+
+.btn-primary:hover{
+  background-color: forestgreen;
+}
+.btn-primary:active{
+  background-color: darkcyan;
 }
 .text-position{
   text-align: center;
@@ -128,7 +135,7 @@ export default {
   color: #fff;
   border: none;
   font-weight: 600;
-  background: #2f66cd;
+  background: #10df2c;
   background: linear-gradient(90deg, #2f66cd, #4db0db 75%, #5ab6de);
 }
 
